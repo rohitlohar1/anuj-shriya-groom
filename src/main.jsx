@@ -405,11 +405,11 @@ function ScratchDate({ onCalendar }) {
     ctx.clip(new Path2D(heartPath));
 
     const g = ctx.createLinearGradient(0, 0, 600, 560);
-    g.addColorStop(0, '#c7a363');
+    g.addColorStop(0, '#cca058');
     g.addColorStop(0.2, '#fcedc7');
-    g.addColorStop(0.4, '#b38d4a');
+    g.addColorStop(0.4, '#b8834d');
     g.addColorStop(0.65, '#f5e4bb');
-    g.addColorStop(0.85, '#9e7337');
+    g.addColorStop(0.85, '#966f33');
     g.addColorStop(1, '#dfbf7b');
     ctx.fillStyle = g;
     ctx.fillRect(0, 0, 600, 560);
@@ -419,7 +419,7 @@ function ScratchDate({ onCalendar }) {
     for (let i = 0; i < 28000; i++) {
       const x = rnd() * 600;
       const y = rnd() * 560;
-      ctx.fillStyle = rnd() > 0.4 ? 'rgba(255, 250, 235, 0.55)' : 'rgba(84, 40, 20, 0.28)';
+      ctx.fillStyle = rnd() > 0.4 ? 'rgba(255, 250, 235, 0.55)' : 'rgba(122, 53, 34, 0.28)';
       ctx.fillRect(x, y, rnd() * 2 + 1, rnd() * 2 + 1);
     }
     ctx.restore();
@@ -542,7 +542,7 @@ function ScratchDate({ onCalendar }) {
                   '--x': `${(i * 37) % 100}%`,
                   '--r': `${i * 47}deg`,
                   '--delay': `${(i % 10) * 0.06}s`,
-                  '--color': ['#c5a059', '#71253a', '#f5e4c3', '#e89da9', '#dfb86c'][i % 5]
+                  '--color': ['#cca058', '#b84a32', '#fcedcf', '#d18653', '#e4b673'][i % 5]
                 }}
               />
             ))}
@@ -722,7 +722,7 @@ export default function App() {
       duration: 2.2 + Math.random() * 1.6,
       size: 10 + Math.random() * 14,
       rotation: Math.random() * 360,
-      color: ['#c41e3a', '#e63946', '#f39c12', '#d4af37', '#f8a5c2'][Math.floor(Math.random() * 5)]
+      color: ['#b84a32', '#d47b4a', '#e59a58', '#cca058', '#f3d19c'][Math.floor(Math.random() * 5)]
     }));
 
     setFallingPetals(prev => [...prev, ...newPetals]);
@@ -881,8 +881,8 @@ export default function App() {
           <section className="garden-hero" id="welcome">
             <img
               className="garden-art"
-              src="/art/garden-invitation.webp"
-              alt="An ivory fountain palace garden with burgundy roses and gold-trimmed silk drapes"
+              src="/art/terracotta-palace-invitation.webp"
+              alt="An ivory fountain palace garden with warm terracotta roses and gold-trimmed silk drapes"
               fetchPriority="high"
               width="1024"
               height="1792"
@@ -1133,7 +1133,7 @@ export default function App() {
 
                 {heartBurst && (
                   <div className="heart-burst-anim" aria-hidden="true">
-                    <Heart size={54} fill="#c41e3a" color="#c41e3a" />
+                    <Heart size={54} fill="#b84a32" color="#b84a32" />
                   </div>
                 )}
               </div>
@@ -1399,7 +1399,7 @@ export default function App() {
               </button>
 
               <div className="blessing-tally">
-                <Heart size={16} fill="#c41e3a" color="#c41e3a" />
+                <Heart size={16} fill="#b84a32" color="#b84a32" />
                 <b>{blessingsCount.toLocaleString()}</b>
                 <span>Blessings showered by loved ones</span>
               </div>

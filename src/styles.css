@@ -1,22 +1,32 @@
 /* ==========================================================================
-   PUJA & HARSHIL — WEDDING INVITATION (MOBILE-FIRST LUXURY)
+   ANUJ & SHRIYA — WARM TERRACOTTA, CAMEL & VINTAGE GOLD LUXURY THEME
    ========================================================================== */
 
 :root {
-  --wine: #542031;
-  --wine-deep: #38121f;
-  --wine-dark: #240a13;
-  --wine-light: #732e44;
-  --gold: #c5a059;
-  --gold-light: #f3e6ca;
-  --gold-dark: #966d35;
-  --gold-shimmer: #e8cd8c;
-  --paper: #fcf9f2;
-  --paper-card: #f8f2e7;
-  --paper-warm: #f3ead7;
-  --ink: #553428;
-  --ink-light: #7c5c4e;
-  --muted: #9e8272;
+  /* Warm Terracotta, Camel & Vintage Gold Theme */
+  --terracotta: #7a3522;
+  --terracotta-deep: #4d2115;
+  --terracotta-dark: #26110a;
+  --terracotta-light: #9c4c34;
+  --camel: #b8834d;
+  --camel-deep: #966536;
+  --camel-light: #dfb281;
+  --gold: #cca058;
+  --gold-light: #f7ecce;
+  --gold-dark: #966f33;
+  --gold-shimmer: #ecd18b;
+  --paper: #fdfaf4;
+  --paper-card: #f9f4ea;
+  --paper-warm: #f4ecdc;
+  --ink: #482d22;
+  --ink-light: #704d3d;
+  --muted: #967462;
+  
+  /* Semantic mappings to active palette */
+  --wine: var(--terracotta);
+  --wine-deep: var(--terracotta-deep);
+  --wine-dark: var(--terracotta-dark);
+  --wine-light: var(--terracotta-light);
   
   --serif: 'Cormorant Garamond', Georgia, serif;
   --display: 'Cinzel', serif;
@@ -125,7 +135,7 @@ img {
   inset: 0;
   z-index: -1;
   background: 
-    radial-gradient(ellipse at center, rgba(84, 32, 49, 0.92) 0%, rgba(36, 10, 19, 0.98) 100%),
+    radial-gradient(ellipse at center, rgba(122, 53, 34, 0.92) 0%, rgba(36, 10, 19, 0.98) 100%),
     url('/art/embossed-wine-doors.webp') center/cover no-repeat;
   pointer-events: none;
 }
@@ -233,7 +243,7 @@ img {
   border: 1px solid rgba(197, 160, 89, 0.45);
   border-radius: 30px;
   padding: 7px 14px;
-  box-shadow: 0 3px 12px rgba(84, 32, 49, 0.12);
+  box-shadow: 0 3px 12px rgba(122, 53, 34, 0.12);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -274,7 +284,7 @@ img {
   font-family: var(--sans);
   font-size: 11px;
   font-weight: 600;
-  box-shadow: 0 3px 12px rgba(84, 32, 49, 0.12);
+  box-shadow: 0 3px 12px rgba(122, 53, 34, 0.12);
   animation: pulseGentle 3.5s ease-in-out infinite;
 }
 
@@ -295,7 +305,7 @@ img {
   border: 1px solid rgba(197, 160, 89, 0.55);
   color: var(--gold-dark);
   border-radius: 50%;
-  box-shadow: 0 3px 12px rgba(84, 32, 49, 0.12);
+  box-shadow: 0 3px 12px rgba(122, 53, 34, 0.12);
   transition: all 0.2s ease;
 }
 
@@ -370,12 +380,12 @@ img {
   top: 0;
   bottom: 0;
   width: 50%;
-  background-image: url('/art/embossed-wine-doors.webp');
+  background-image: url('/art/embossed-terracotta-doors.webp');
   background-size: 200% 100%;
   backface-visibility: hidden;
   transform-style: preserve-3d;
   transition: transform 1.45s cubic-bezier(0.4, 0, 0.15, 1);
-  box-shadow: 0 0 35px rgba(10, 2, 6, 0.85);
+  box-shadow: 0 0 35px rgba(20, 8, 4, 0.85);
 }
 
 .floral-door.left {
@@ -458,7 +468,7 @@ img {
   align-items: center;
   justify-content: center;
   gap: 4px;
-  filter: drop-shadow(0 12px 24px rgba(12, 2, 7, 0.9));
+  filter: drop-shadow(0 12px 24px rgba(22, 9, 5, 0.9));
   color: var(--wine-dark);
   animation: sealBreathing 3.2s ease-in-out infinite;
   transition: transform 0.25s ease;
@@ -561,7 +571,7 @@ img {
   border-radius: 12px;
   margin-top: 8px;
   line-height: 1;
-  box-shadow: 0 2px 8px rgba(84, 32, 49, 0.4);
+  box-shadow: 0 2px 8px rgba(122, 53, 34, 0.4);
 }
 
 .seal-tap svg {
@@ -887,7 +897,7 @@ img {
   font-weight: 600;
   color: var(--wine);
   line-height: 1;
-  box-shadow: 0 2px 10px rgba(84, 32, 49, 0.08);
+  box-shadow: 0 2px 10px rgba(122, 53, 34, 0.08);
 }
 
 .hero-date-badge svg {
@@ -979,7 +989,7 @@ img {
   border-radius: 18px;
   border: 1px solid rgba(197, 160, 89, 0.45);
   box-shadow: 
-    0 10px 30px rgba(84, 32, 49, 0.07),
+    0 10px 30px rgba(122, 53, 34, 0.07),
     0 2px 10px rgba(197, 160, 89, 0.12),
     inset 0 0 40px rgba(245, 235, 215, 0.6);
   text-align: center;
@@ -1119,7 +1129,7 @@ img {
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.1em;
-  box-shadow: 0 4px 16px rgba(84, 32, 49, 0.35);
+  box-shadow: 0 4px 16px rgba(122, 53, 34, 0.35);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -1132,7 +1142,7 @@ img {
 
 .wedding-wine-btn:active {
   transform: scale(0.97);
-  box-shadow: 0 2px 8px rgba(84, 32, 49, 0.2);
+  box-shadow: 0 2px 8px rgba(122, 53, 34, 0.2);
 }
 
 .wedding-gold-btn {
@@ -1298,7 +1308,7 @@ img {
   justify-content: center;
   gap: 5px;
   margin-top: 4px;
-  background: rgba(84, 32, 49, 0.08);
+  background: rgba(122, 53, 34, 0.08);
   border: 1px solid rgba(197, 160, 89, 0.45);
   border-radius: 12px;
   padding: 3px 8px;
@@ -1426,7 +1436,7 @@ img {
   border: 1px solid rgba(197, 160, 89, 0.45);
   border-radius: 12px;
   padding: 10px 4px;
-  box-shadow: 0 4px 12px rgba(84, 32, 49, 0.06);
+  box-shadow: 0 4px 12px rgba(122, 53, 34, 0.06);
 }
 
 .countdown-card b {
@@ -1494,7 +1504,7 @@ img {
   aspect-ratio: 1;
   border: 2px solid rgba(197, 160, 89, 0.55);
   background: #ecdac0;
-  box-shadow: 0 8px 24px rgba(84, 32, 49, 0.15);
+  box-shadow: 0 8px 24px rgba(122, 53, 34, 0.15);
 }
 
 .carousel-img {
@@ -1582,7 +1592,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 14px rgba(84, 32, 49, 0.15);
+  box-shadow: 0 4px 14px rgba(122, 53, 34, 0.15);
   z-index: 5;
 }
 
@@ -1658,13 +1668,13 @@ img {
   border: 1px solid rgba(197, 160, 89, 0.45);
   border-radius: 14px;
   padding: 12px 14px;
-  box-shadow: 0 3px 10px rgba(84, 32, 49, 0.05);
+  box-shadow: 0 3px 10px rgba(122, 53, 34, 0.05);
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .timeline-card.expanded {
   border-color: var(--gold);
-  box-shadow: 0 6px 18px rgba(84, 32, 49, 0.1);
+  box-shadow: 0 6px 18px rgba(122, 53, 34, 0.1);
 }
 
 .timeline-header-btn {
@@ -1716,7 +1726,7 @@ img {
   font-size: 9.5px;
   font-weight: 700;
   color: var(--wine);
-  background: rgba(84, 32, 49, 0.08);
+  background: rgba(122, 53, 34, 0.08);
   padding: 2px 7px;
   border-radius: 10px;
   line-height: 1;
@@ -1832,7 +1842,7 @@ img {
   border-radius: 14px;
   overflow: hidden;
   border: 1.5px solid rgba(197, 160, 89, 0.55);
-  box-shadow: 0 4px 18px rgba(84, 32, 49, 0.1);
+  box-shadow: 0 4px 18px rgba(122, 53, 34, 0.1);
   background: #f4ecdc;
 }
 
@@ -1868,7 +1878,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 16px rgba(84, 32, 49, 0.35);
+  box-shadow: 0 4px 16px rgba(122, 53, 34, 0.35);
   margin-bottom: 4px;
 }
 
@@ -2329,7 +2339,7 @@ img {
   border-radius: 12px;
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.6);
   padding: 6px;
-  background: rgba(84, 32, 49, 0.3);
+  background: rgba(122, 53, 34, 0.3);
 }
 
 .lightbox figcaption {
@@ -2379,7 +2389,7 @@ img {
   height: 42px;
   border: 1px solid rgba(197, 160, 89, 0.5);
   color: var(--gold-light);
-  background: rgba(84, 32, 49, 0.85);
+  background: rgba(122, 53, 34, 0.85);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2484,13 +2494,13 @@ img {
   padding: 20px 16px;
   text-align: center;
   position: relative;
-  box-shadow: 0 4px 14px rgba(84, 32, 49, 0.05);
+  box-shadow: 0 4px 14px rgba(122, 53, 34, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .patrika-side-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(84, 32, 49, 0.08);
+  box-shadow: 0 6px 20px rgba(122, 53, 34, 0.08);
 }
 
 .patrika-side-header {
@@ -2560,7 +2570,7 @@ img {
   font-size: 12px;
   font-weight: 500;
   color: var(--wine-light);
-  background: rgba(84, 32, 49, 0.05);
+  background: rgba(122, 53, 34, 0.05);
   padding: 4px 12px;
   border-radius: 12px;
   margin-top: 8px;
@@ -2622,7 +2632,7 @@ img {
   background: var(--wine);
   color: #fff;
   border-color: var(--wine);
-  box-shadow: 0 3px 10px rgba(84, 32, 49, 0.25);
+  box-shadow: 0 3px 10px rgba(122, 53, 34, 0.25);
 }
 
 .day-separator-ribbon {
@@ -2657,7 +2667,7 @@ img {
   font-size: 10px;
   font-weight: 600;
   color: var(--wine-light);
-  background: rgba(84, 32, 49, 0.08);
+  background: rgba(122, 53, 34, 0.08);
   padding: 2px 7px;
   border-radius: 4px;
 }
