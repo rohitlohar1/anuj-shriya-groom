@@ -43,9 +43,9 @@ const photos = [
   },
   { 
     id: 5, 
-    caption: 'A timeless union of two souls and two blessed families.', 
-    tag: 'We Said Yes', 
-    alt: 'Anuj and Shriya in festive Indian attire for their engagement announcement' 
+    caption: 'Held close and promised for a lifetime.', 
+    tag: 'Eternal Promise', 
+    alt: 'Anuj and Shriya with hands interlocked showing the engagement ring' 
   },
 ];
 
