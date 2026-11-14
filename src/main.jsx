@@ -21,13 +21,13 @@ const photos = [
     id: 1, 
     caption: 'In your embrace, every step feels like coming home.', 
     tag: 'Joyful Forever', 
-    alt: 'Anuj lifting Shriya joyfully amidst lush hillside meadows' 
+    alt: 'Shriya and Anuj joyful amidst lush hillside meadows' 
   },
   { 
     id: 4, 
     caption: 'The smile that lights up every single tomorrow.', 
     tag: 'Endless Sunshine', 
-    alt: 'Anuj and Shriya sharing an affectionate moment together' 
+    alt: 'Shriya and Anuj sharing an affectionate moment together' 
   },
   { 
     id: 3, 
@@ -39,13 +39,13 @@ const photos = [
     id: 2, 
     caption: 'Two hands, one destined path into infinity.', 
     tag: 'Sacred Touch', 
-    alt: 'Anuj and Shriya reaching towards each other on a scenic road' 
+    alt: 'Shriya and Anuj reaching towards each other on a scenic road' 
   },
   { 
     id: 5, 
     caption: 'Held close and promised for a lifetime.', 
     tag: 'Eternal Promise', 
-    alt: 'Anuj and Shriya with hands interlocked showing the engagement ring' 
+    alt: 'Shriya and Anuj with hands interlocked showing the engagement ring' 
   },
 ];
 
@@ -71,7 +71,25 @@ const events = [
     sanskrit: 'शर्मिला सोलंकी का पावन मायरा (मामेरा) एवं प्रीतिभोज',
     detail: 'The deeply cherished traditional Mayra (Mamera) ceremony honoring the bride’s mother, Smt. Sharmila Solanki, welcoming maternal uncles and family with joyous folk songs, sacred gifts, and heartfelt blessings, followed by an exquisite royal lunch feast.', 
     tag: 'Sacred Tradition',
-    icon: '✧' 
+    icon: '✧',
+    myraDetails: {
+      quote: '“नाना - नानी का आशीर्वाद, मामा - मामी\nमायरे की रस्म में छुपे हैं अनगिनत जज़्बात।”',
+      eldersBadge: 'बुज़ुर्गों का आशीर्वाद · NANA - NANI',
+      eldersSubtitle: 'Ancestral Blessings & Eternal Guiding Light',
+      elderName: 'Late Smt. Ratnibai Premchandji Gulabchandji Shrishrimal',
+      elderOrigin: '(Naya Jogapura) · Karjat',
+      mamasBadge: 'मायरा मुख्य अतिथि · MAMAS & MAMIS',
+      mamasSubtitle: 'Maternal Family & Main Honored Guests (Mosalu)',
+      couples: [
+        { wife: 'Madiya', husband: 'Kishorji' },
+        { wife: 'Shobha', husband: 'Ranjeetji' },
+        { wife: 'Sangeeta', husband: 'Dineshji' },
+        { wife: 'Reena', husband: 'Manojji' },
+        { wife: 'Ritu', husband: 'Pratikji' },
+        { wife: 'Ruchika', husband: 'Shrayji' },
+        { wife: 'Risha', husband: 'Krisha', isNextGen: true }
+      ]
+    } 
   },
   { 
     day: 1,
@@ -115,7 +133,7 @@ const events = [
     time: '1:15 PM', 
     title: 'Hastmilap & Lunch (The Auspicious Wedding)', 
     sanskrit: 'शुभ हस्तमिलाप, सप्तपदी फेरे एवं प्रीतिभोज',
-    detail: 'The eternal union of Anuj & Shriya! The sacred Vedic rituals, Hastamelap, Kanyadaan, circumambulation of the holy Agni (Mangalpheras), and eternal Saptapadi vows, followed by a celebratory wedding feast (Preeti Bhoj).', 
+    detail: 'The eternal union of Shriya & Anuj! The sacred Vedic rituals, Hastamelap, Kanyadaan, circumambulation of the holy Agni (Mangalpheras), and eternal Saptapadi vows, followed by a celebratory wedding feast (Preeti Bhoj).', 
     tag: 'Auspicious Muhurat',
     icon: '♡' 
   },
@@ -582,6 +600,7 @@ export default function App() {
   const [fallingPetals, setFallingPetals] = useState([]);
   const [heartBurst, setHeartBurst] = useState(false);
   const [cardModalOpen, setCardModalOpen] = useState(false);
+  const [myraModalOpen, setMyraModalOpen] = useState(false);
 
   const audioSystem = useWeddingAudio();
   const timers = useRef([]);
@@ -658,15 +677,15 @@ export default function App() {
     const lines = [
       'BEGIN:VCALENDAR',
       'VERSION:2.0',
-      'PRODID:-//Kothari & Solanki Families//Wedding Invitation//EN',
+      'PRODID:-//Nagotra Solanki Family//Wedding Invitation//EN',
       'BEGIN:VEVENT',
-      'UID:anuj-shriya-20270123@kothari-solanki.wedding',
+      'UID:shriya-anuj-20270123@nagotra-solanki.wedding',
       'DTSTAMP:20261103T000000Z',
       'DTSTART:20270123T023000Z',
       'DTEND:20270124T123000Z',
-      'SUMMARY:Anuj & Shriya Royal Wedding Celebration',
+      'SUMMARY:Shriya & Anuj Royal Wedding Celebration',
       'LOCATION:Purohit Holiday Resort\\, Chhatrapati Shivaji Maharaj Road\\, Near ST Bus Stand\\, Lonavala\\, Maharashtra 410401',
-      'DESCRIPTION:With love & blessings from the Kothari & Solanki families. Day 1 (Jan 23): Jaan Swagat (8 AM), Mayra of Sharmila Solanki (10 AM), Carnival & High Tea (2 PM), Sangeet (6:30 PM). Day 2 (Jan 24): Anuj ki Baarat (10:30 AM), Hastmilap & Lunch (1:15 PM IST).',
+      'DESCRIPTION:Nagotra Solanki family welcomes you to celebrate the wedding of Shriya & Anuj. Day 1 (Jan 23): Jaan Swagat (8 AM), Mayra of Sharmila Solanki (10 AM), Carnival & High Tea (2 PM), Sangeet (6:30 PM). Day 2 (Jan 24): Anuj ki Baarat (10:30 AM), Hastmilap & Lunch (1:15 PM IST).',
       'END:VEVENT',
       'END:VCALENDAR'
     ];
@@ -674,7 +693,7 @@ export default function App() {
     const url = URL.createObjectURL(new Blob([content], { type: 'text/calendar;charset=utf-8' }));
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'Anuj-Shriya-Wedding.ics';
+    a.download = 'Shriya-Anuj-Wedding.ics';
     a.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
     showToast('Wedding celebration saved to calendar file!');
@@ -683,8 +702,8 @@ export default function App() {
   const share = async () => {
     try {
       const data = {
-        title: 'Anuj & Shriya — Royal Wedding Celebration',
-        text: 'With immense joy and the blessings of our elders, the Kothari & Solanki families invite you to celebrate the wedding of Anuj & Shriya on 23rd & 24th January 2027 at Purohit Holiday Resort, Lonavala.',
+        title: 'Shriya & Anuj — Royal Wedding Celebration',
+        text: 'With immense joy and the blessings of our elders, Nagotra Solanki family welcomes you to celebrate the wedding of Shriya & Anuj on 23rd & 24th January 2027 at Purohit Holiday Resort, Lonavala.',
         url: window.location.href
       };
       if (navigator.share) {
@@ -730,7 +749,7 @@ export default function App() {
       setFallingPetals(prev => prev.filter(p => !newPetals.includes(p)));
     }, 4500);
 
-    showToast('🌸 Heartfelt blessings showered upon Anuj & Shriya!');
+    showToast('🌸 Heartfelt blessings showered upon Shriya & Anuj!');
   }, [audioSystem, showToast]);
 
   const handleDoubleTapPhoto = () => {
@@ -783,9 +802,9 @@ export default function App() {
             className="topbar-monogram"
             onClick={phase === 'sealed' ? e => e.preventDefault() : undefined}
           >
-            <span>A</span>
-            <span className="mono-amp">❦</span>
             <span>S</span>
+            <span className="mono-amp">❦</span>
+            <span>A</span>
           </a>
 
           <div className="topbar-actions">
@@ -822,7 +841,7 @@ export default function App() {
 
         {/* Opening Velvet Doors Scene */}
         {phase !== 'entered' && (
-          <div className={`opening-scene ${phase}`} aria-label="Open Anuj and Shriya’s wedding invitation">
+          <div className={`opening-scene ${phase}`} aria-label="Open Shriya and Anuj’s wedding invitation">
             <div className="intro-curtains" aria-hidden="true">
               <div className="curtain-panel curtain-left" />
               <div className="curtain-panel curtain-right" />
@@ -838,18 +857,18 @@ export default function App() {
                   <div className="gate-welcome">
                     <div className="gate-header">
                       <span className="gate-om">॥ श्री गणेशाय नमः ॥</span>
-                      <span className="gate-family">WITH LOVE & BLESSINGS FROM THE KOTHARI & SOLANKI FAMILIES</span>
+                      <span className="gate-family">NAGOTRA SOLANKI FAMILY WELCOMES YOU</span>
                     </div>
 
                     <button
                       className="invitation-seal"
                       onClick={() => enter(true)}
-                      aria-label="Open Anuj and Shriya’s wedding invitation with music"
+                      aria-label="Open Shriya and Anuj’s wedding invitation with music"
                     >
                       <span className="seal-outer-rim" />
                       <span className="seal-flower">❦</span>
                       <small className="seal-kicker">You are cordially invited</small>
-                      <b className="seal-names">A <i>&</i> S</b>
+                      <b className="seal-names">S <i>&</i> A</b>
                       <span className="seal-date-pill">SHUBH VIVAH</span>
                       <span className="seal-tap">
                         <Sparkles size={11} /> TAP TO UNVEIL <Sparkles size={11} />
@@ -902,19 +921,19 @@ export default function App() {
               <div className="invitation-herald">
                 <span className="herald-sub">TOGETHER WITH THEIR FAMILIES</span>
                 <h1>
-                  <span className="name-bride">Anuj</span>
+                  <span className="name-bride">Shriya</span>
                   <i className="ampersand">&</i>
-                  <span className="name-groom">Shriya</span>
+                  <span className="name-groom">Anuj</span>
                 </h1>
                 <p className="herald-tag">Joyfully invite you to celebrate their wedding</p>
               </div>
 
               <div className="family-introduction">
-                <span className="family-crown">THE KOTHARI FAMILY</span>
+                <span className="family-crown">NAGOTRA SOLANKI FAMILY WELCOMES YOU</span>
                 <p>
-                  cordially invites you to share our happiness and bless the new beginning with the
+                  to share our happiness and bless the new beginning together with the
                 </p>
-                <span className="family-crown secondary">SOLANKI FAMILY</span>
+                <span className="family-crown secondary">KOTHARI FAMILY</span>
               </div>
 
               <div className="hero-date-badge">
@@ -951,7 +970,7 @@ export default function App() {
             <h2 className="section-title">A Garden of Forever</h2>
             
             <p className="note-text lead">
-              With the graceful blessings of our revered elders, grandparents, and the Almighty, we are overjoyed to welcome you to our wedding celebrations in scenic Lonavala.
+              With the graceful blessings of our revered elders, grandparents, and the Almighty, Nagotra Solanki family welcomes you to celebrate the wedding of Shriya & Anuj in scenic Lonavala.
             </p>
             
             <p className="note-text">
@@ -960,7 +979,7 @@ export default function App() {
 
             <div className="script-signature">
               <span>With eternal love & respect,</span>
-              <b>Anuj & Shriya</b>
+              <b>Shriya & Anuj</b>
               <Heart size={14} className="heart-pulse" />
             </div>
             <WeddingDivider symbol="✿" />
@@ -977,6 +996,39 @@ export default function App() {
             <p className="section-lead">Rooted in tradition, values, and boundless ancestral blessings.</p>
 
             <div className="patrika-grid">
+              {/* Bride's Family Side */}
+              <div className="patrika-side-card bride-side">
+                <div className="patrika-side-header">
+                  <span className="side-badge">वधू पक्ष · NAGOTRA SOLANKI FAMILY</span>
+                  <h3 className="side-member-name">Shriya Solanki</h3>
+                </div>
+
+                <div className="lineage-item">
+                  <span className="lineage-rel">Granddaughter of</span>
+                  <b className="lineage-name">Late Smt. & Shri Nenubai Sukhrajji Solanki</b>
+                </div>
+
+                <div className="lineage-divider-mini" />
+
+                <div className="lineage-item">
+                  <span className="lineage-rel">Daughter of</span>
+                  <b className="lineage-name">Smt. Sharmila & Shri Kishor Solanki</b>
+                </div>
+
+                <div className="lineage-divider-mini" />
+
+                <div className="lineage-item maternal-lineage-item">
+                  <span className="lineage-rel">Maternal Heritage (Nanihal)</span>
+                  <b className="lineage-name">Late Smt. Ratnibai Premchandji Gulabchandji Shrishrimal</b>
+                  <span className="lineage-sub-loc">(Naya Jogapura) · Karjat</span>
+                </div>
+
+                <div className="lineage-place">
+                  <MapPin size={12} />
+                  <span>Novi (USA) / Pune</span>
+                </div>
+              </div>
+
               {/* Groom's Family Side */}
               <div className="patrika-side-card groom-side">
                 <div className="patrika-side-header">
@@ -1001,39 +1053,20 @@ export default function App() {
                   <span>Badgaon, Chennai</span>
                 </div>
               </div>
-
-              {/* Bride's Family Side */}
-              <div className="patrika-side-card bride-side">
-                <div className="patrika-side-header">
-                  <span className="side-badge">वधू पक्ष · BRIDE’S FAMILY</span>
-                  <h3 className="side-member-name">Shriya Solanki</h3>
-                </div>
-
-                <div className="lineage-item">
-                  <span className="lineage-rel">Granddaughter of</span>
-                  <b className="lineage-name">Late Smt. & Shri Nenubai Sukhrajji Solanki</b>
-                </div>
-
-                <div className="lineage-divider-mini" />
-
-                <div className="lineage-item">
-                  <span className="lineage-rel">Daughter of</span>
-                  <b className="lineage-name">Smt. Sharmila & Shri Kishor Solanki</b>
-                </div>
-
-                <div className="lineage-place">
-                  <MapPin size={12} />
-                  <span>Novi (USA) / Pune</span>
-                </div>
-              </div>
             </div>
 
             <div className="patrika-card-preview-action">
               <button 
-                className="view-original-card-btn"
+                className="view-original-card-btn mb-5"
                 onClick={() => setCardModalOpen(true)}
               >
                 <Eye size={15} /> View Official “We Said Yes” Announcement Card
+              </button>
+              <button 
+                className="view-original-card-btn myra-callout-btn"
+                onClick={() => setMyraModalOpen(true)}
+              >
+                <Sparkles size={15} /> View Mayra (Mamera) Patrika & Guest Honors
               </button>
             </div>
           </section>
@@ -1276,6 +1309,62 @@ export default function App() {
                         hidden={!isExpanded}
                       >
                         <p className="event-detail-text">{event.detail}</p>
+
+                        {event.myraDetails && (
+                          <div className="myra-compact-card">
+                            {/* Hindi Verse */}
+                            <div className="myra-compact-verse-wrap">
+                              <span className="myra-compact-flourish">❦</span>
+                              <p className="myra-compact-verse">
+                                “नाना - नानी का आशीर्वाद, मामा - मामी<br />
+                                मायरे की रस्म में छुपे हैं अनगिनत जज़्बात।”
+                              </p>
+                            </div>
+
+                            {/* Section 1: Elders (Nana - Nani) */}
+                            <div className="myra-compact-section elders-section">
+                              <div className="myra-compact-header">
+                                <Sparkles size={11} className="myra-compact-icon" />
+                                <span className="myra-compact-badge">{event.myraDetails.eldersBadge}</span>
+                              </div>
+                              <div className="myra-compact-elder-row">
+                                <b className="myra-elder-name">{event.myraDetails.elderName}</b>
+                                <span className="myra-elder-place">
+                                  <MapPin size={10} /> {event.myraDetails.elderOrigin}
+                                </span>
+                              </div>
+                            </div>
+
+                            {/* Section 2: Main Guests (Mamas & Mamis) */}
+                            <div className="myra-compact-section mamas-section">
+                              <div className="myra-compact-header">
+                                <Heart size={11} className="myra-compact-icon" />
+                                <span className="myra-compact-badge">{event.myraDetails.mamasBadge}</span>
+                              </div>
+                              
+                              <div className="myra-couples-grid">
+                                {event.myraDetails.couples.map((couple, cIdx) => (
+                                  <div 
+                                    key={cIdx} 
+                                    className={`myra-couple-pair ${couple.isNextGen ? 'next-gen' : ''}`}
+                                  >
+                                    <span className="couple-name">{couple.wife}</span>
+                                    <span className="couple-amp">&</span>
+                                    <span className="couple-name">{couple.husband}</span>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+
+                            <button
+                              type="button"
+                              className="myra-compact-patrika-btn"
+                              onClick={() => setMyraModalOpen(true)}
+                            >
+                              <Eye size={10} /> View Patrika
+                            </button>
+                          </div>
+                        )}
                       </div>
                     </article>
                   </React.Fragment>
@@ -1384,14 +1473,14 @@ export default function App() {
             <span className="card-kicker">PHOOL VRUSHTI · SHOWER BLESSINGS</span>
             <h2 className="section-title">Shower Your Blessings</h2>
             <p className="section-lead">
-              Tap below to shower auspicious rose and marigold petals upon Anuj & Shriya!
+              Tap below to shower auspicious rose and marigold petals upon Shriya & Anuj!
             </p>
 
             <div className="blessing-interactive-core">
               <button
                 className="shower-flower-btn"
                 onClick={showerBlessings}
-                aria-label="Shower flower blessings on Anuj and Shriya"
+                aria-label="Shower flower blessings on Shriya and Anuj"
               >
                 <span className="shower-ring-pulse" />
                 <span className="flower-emoji">🌸</span>
@@ -1420,18 +1509,18 @@ export default function App() {
 
             <WeddingDivider symbol="❦" />
             <span className="card-kicker">WITH PROFOUND GRATITUDE & REVERENCE</span>
-            <h2 className="closing-family-title">The Kothari Family</h2>
+            <h2 className="closing-family-title">The Nagotra Solanki Family</h2>
             <span className="family-and">&</span>
-            <h2 className="closing-family-title secondary">The Solanki Family</h2>
+            <h2 className="closing-family-title secondary">The Kothari Family</h2>
 
             <p className="closing-tagline">
-              Your gracious presence and cherished blessings will make our celebration complete. We eagerly await your arrival in Lonavala!
+              Nagotra Solanki family welcomes you to celebrate with us. Your gracious presence and cherished blessings will make our celebration complete. We eagerly await your arrival in Lonavala!
             </p>
 
             <div className="closing-couple-names">
-              <span>Anuj</span>
-              <i>&</i>
               <span>Shriya</span>
+              <i>&</i>
+              <span>Anuj</span>
             </div>
 
             <div className="closing-actions">
@@ -1546,12 +1635,96 @@ export default function App() {
             <div className="card-modal-img-wrap">
               <img 
                 src="/images/official-card.webp" 
-                alt="Official engagement card for Anuj & Shriya with family lineage" 
+                alt="Official engagement card for Shriya & Anuj with family lineage" 
               />
             </div>
             <p className="card-modal-caption">
-              Official Engagement Announcement · Anuj & Shriya
+              Official Engagement Announcement · Shriya & Anuj
             </p>
+          </div>
+        </div>
+      )}
+
+      {/* Royal Myra (Mamera) Patrika Modal */}
+      {myraModalOpen && (
+        <div 
+          className="myra-modal-overlay"
+          onClick={() => setMyraModalOpen(false)}
+        >
+          <div 
+            className="myra-modal-sheet"
+            onClick={e => e.stopPropagation()}
+            role="dialog"
+            aria-label="Myra Function Patrika"
+          >
+            <button 
+              className="myra-modal-close"
+              onClick={() => setMyraModalOpen(false)}
+              aria-label="Close Myra Patrika"
+            >
+              <X size={18} />
+            </button>
+
+            <div className="myra-modal-crest">
+              <span className="myra-modal-om">॥ श्री गणेशाय नमः ॥</span>
+              <h3 className="myra-modal-title">Myra Function</h3>
+              <span className="myra-modal-sanskrit">शर्मिला सोलंकी का पावन मायरा (मामेरा)</span>
+            </div>
+
+            <div className="myra-modal-quote-box">
+              <span className="myra-quote-ornament">❦</span>
+              <p className="myra-quote-hindi">
+                “नाना - नानी का आशीर्वाद, मामा - मामी<br />
+                मायरे की रस्म में छुपे हैं अनगिनत जज़्बात।”
+              </p>
+            </div>
+
+            {/* Upper Section: The Oldies (Nana-Nani / Ancestors) */}
+            <div className="myra-modal-block elders-block">
+              <div className="myra-modal-sec-badge">
+                <Sparkles size={13} />
+                <span>बुज़ुर्गों का आशीर्वाद · NANA - NANI</span>
+              </div>
+              <p className="myra-modal-sec-desc">Ancestral Blessings & Eternal Guiding Light</p>
+              <div className="myra-modal-elder-card">
+                <b className="myra-modal-elder-name">Late Smt. Ratnibai Premchandji Gulabchandji Shrishrimal</b>
+                <span className="myra-modal-elder-place">
+                  <MapPin size={12} /> (Naya Jogapura) · Karjat
+                </span>
+              </div>
+            </div>
+
+            {/* Lower Section: Mamas & Mamis (Main Guests) */}
+            <div className="myra-modal-block mamas-block">
+              <div className="myra-modal-sec-badge">
+                <Heart size={13} />
+                <span>मायरा मुख्य अतिथि · MAMAS & MAMIS</span>
+              </div>
+              <p className="myra-modal-sec-desc">Maternal Family & Main Honored Guests (Mosalu)</p>
+
+              <div className="myra-modal-couples-grid">
+                {[
+                  { wife: 'Madiya', husband: 'Kishorji' },
+                  { wife: 'Shobha', husband: 'Ranjeetji' },
+                  { wife: 'Sangeeta', husband: 'Dineshji' },
+                  { wife: 'Reena', husband: 'Manojji' },
+                  { wife: 'Ritu', husband: 'Pratikji' },
+                  { wife: 'Ruchika', husband: 'Shrayji' },
+                  { wife: 'Risha', husband: 'Krisha', isNextGen: true }
+                ].map((couple, idx) => (
+                  <div key={idx} className={`myra-modal-couple-pill ${couple.isNextGen ? 'next-gen' : ''}`}>
+                    <span className="modal-couple-name">{couple.wife}</span>
+                    <span className="modal-couple-amp">&</span>
+                    <span className="modal-couple-name">{couple.husband}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="myra-modal-footer">
+              <span className="myra-modal-time">Saturday, 23rd January 2027 · 10:00 AM IST</span>
+              <span className="myra-modal-loc">Purohit Holiday Resort, Lonavala</span>
+            </div>
           </div>
         </div>
       )}
