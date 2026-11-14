@@ -1017,14 +1017,6 @@ export default function App() {
                   <b className="lineage-name">Smt. Sharmila & Shri Kishor Solanki</b>
                 </div>
 
-                <div className="lineage-divider-mini" />
-
-                <div className="lineage-item maternal-lineage-item">
-                  <span className="lineage-rel">Maternal Heritage (Nanihal)</span>
-                  <b className="lineage-name">Late Smt. Ratnibai Premchandji Gulabchandji Shrishrimal</b>
-                  <span className="lineage-sub-loc">(Naya Jogapura) · Karjat</span>
-                </div>
-
                 <div className="lineage-place">
                   <MapPin size={12} />
                   <span>Novi, Pune</span>
@@ -1033,6 +1025,10 @@ export default function App() {
 
               {/* Solanki Parivar Family Honors */}
               <div className="patrika-side-card honors-side">
+                {/* Floral Top Corners */}
+                <img src="/art/myra_flower_tl.png" alt="" className="myra-flower-corner myra-flower-tl" aria-hidden="true" />
+                <img src="/art/myra_flower_tr.png" alt="" className="myra-flower-corner myra-flower-tr" aria-hidden="true" />
+
                 <div className="patrika-side-header">
                   <span className="side-badge">✦ SOLANKI PARIVAR ✦</span>
                   <h3 className="side-member-name">Family Honors</h3>
@@ -1131,6 +1127,12 @@ export default function App() {
                     Veeram Distributor, Pune<br />
                     Gautam Collection, Pune
                   </p>
+                </div>
+
+                {/* Bottom Flowers (At the end of Family Honors) */}
+                <div className="honors-bottom-floral-wrap">
+                  <img src="/art/myra_flower_bl.png" alt="" className="honors-bottom-flower-left" aria-hidden="true" />
+                  <img src="/art/myra_flower_br.png" alt="" className="honors-bottom-flower-right" aria-hidden="true" />
                 </div>
               </div>
             </div>
@@ -1771,11 +1773,9 @@ export default function App() {
             role="dialog"
             aria-label="Myra Function Patrika"
           >
-            {/* Floral Corner Ornaments */}
+            {/* Floral Top Corners */}
             <img src="/art/myra_flower_tl.png" alt="" className="myra-flower-corner myra-flower-tl" aria-hidden="true" />
             <img src="/art/myra_flower_tr.png" alt="" className="myra-flower-corner myra-flower-tr" aria-hidden="true" />
-            <img src="/art/myra_flower_bl.png" alt="" className="myra-flower-corner myra-flower-bl" aria-hidden="true" />
-            <img src="/art/myra_flower_br.png" alt="" className="myra-flower-corner myra-flower-br" aria-hidden="true" />
 
             <button 
               className="myra-modal-close"
@@ -1880,6 +1880,12 @@ export default function App() {
               <img src="/art/myra_floret.png" alt="" className="myra-flower-floret" aria-hidden="true" />
               <span className="myra-modal-time">Saturday, 23rd January 2027 · 10:00 AM IST</span>
               <span className="myra-modal-loc">Purohit Holiday Resort, Lonavala</span>
+            </div>
+
+            {/* Bottom Flowers (After the Date) */}
+            <div className="myra-bottom-floral-wrap">
+              <img src="/art/myra_flower_bl.png" alt="" className="myra-bottom-flower-left" aria-hidden="true" />
+              <img src="/art/myra_flower_br.png" alt="" className="myra-bottom-flower-right" aria-hidden="true" />
             </div>
           </div>
         </div>

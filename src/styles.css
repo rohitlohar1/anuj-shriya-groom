@@ -3161,30 +3161,44 @@ img {
   border-top-right-radius: 16px;
 }
 
-.myra-flower-bl {
-  bottom: 0;
-  left: 0;
-  width: 104px;
-  height: auto;
-  border-bottom-left-radius: 16px;
-}
-
-.myra-flower-br {
-  bottom: 0;
-  right: 0;
-  width: 104px;
-  height: auto;
-  border-bottom-right-radius: 16px;
-}
-
 @media (max-width: 400px) {
   .myra-flower-tl,
   .myra-flower-tr {
     width: 66px;
   }
-  .myra-flower-bl,
-  .myra-flower-br {
-    width: 84px;
+}
+
+/* Bottom flowers placed at the end, after the date */
+.myra-bottom-floral-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 14px;
+  margin-bottom: -24px;
+  margin-left: -20px;
+  margin-right: -20px;
+  pointer-events: none;
+  line-height: 0;
+}
+
+.myra-bottom-flower-left {
+  width: 96px;
+  height: auto;
+  border-bottom-left-radius: 16px;
+  user-select: none;
+}
+
+.myra-bottom-flower-right {
+  width: 96px;
+  height: auto;
+  border-bottom-right-radius: 16px;
+  user-select: none;
+}
+
+@media (max-width: 400px) {
+  .myra-bottom-flower-left,
+  .myra-bottom-flower-right {
+    width: 78px;
   }
 }
 
@@ -3446,6 +3460,7 @@ img {
   padding: 28px 20px 26px;
   text-align: center;
   position: relative;
+  overflow: hidden;
   box-shadow: 
     0 4px 18px rgba(122, 53, 34, 0.05),
     inset 0 0 24px rgba(255, 255, 255, 0.9);
@@ -3558,3 +3573,38 @@ img {
   font-weight: 500;
   margin: 0;
 }
+
+/* Bottom flowers for Family Honors card */
+.honors-bottom-floral-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 14px;
+  margin-bottom: -26px;
+  margin-left: -20px;
+  margin-right: -20px;
+  pointer-events: none;
+  line-height: 0;
+}
+
+.honors-bottom-flower-left {
+  width: 96px;
+  height: auto;
+  border-bottom-left-radius: 16px;
+  user-select: none;
+}
+
+.honors-bottom-flower-right {
+  width: 96px;
+  height: auto;
+  border-bottom-right-radius: 16px;
+  user-select: none;
+}
+
+@media (max-width: 400px) {
+  .honors-bottom-flower-left,
+  .honors-bottom-flower-right {
+    width: 78px;
+  }
+}
+
