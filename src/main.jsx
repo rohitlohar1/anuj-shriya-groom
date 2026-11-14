@@ -997,9 +997,13 @@ export default function App() {
             <h2 className="section-title">The Bride’s Family</h2>
             <p className="section-lead">Rooted in tradition, values, and boundless ancestral blessings.</p>
 
-            <div className="patrika-grid">
-              {/* Bride's Family Side */}
-              <div className="patrika-side-card bride-side">
+            <div className="patrika-grid single-family">
+              {/* The Bride's Family: Nagotra Solanki Family */}
+              <div className="patrika-side-card bride-side honors-side">
+                {/* Floral Top Corners */}
+                <img src="/art/myra_flower_tl.png" alt="" className="myra-flower-corner myra-flower-tl" aria-hidden="true" />
+                <img src="/art/myra_flower_tr.png" alt="" className="myra-flower-corner myra-flower-tr" aria-hidden="true" />
+
                 <div className="patrika-side-header">
                   <span className="side-badge">वधू पक्ष · NAGOTRA SOLANKI FAMILY</span>
                   <h3 className="side-member-name">Shriya Solanki</h3>
@@ -1021,18 +1025,13 @@ export default function App() {
                   <MapPin size={12} />
                   <span>Novi, Pune</span>
                 </div>
-              </div>
 
-              {/* Solanki Parivar Family Honors */}
-              <div className="patrika-side-card honors-side">
-                {/* Floral Top Corners */}
-                <img src="/art/myra_flower_tl.png" alt="" className="myra-flower-corner myra-flower-tl" aria-hidden="true" />
-                <img src="/art/myra_flower_tr.png" alt="" className="myra-flower-corner myra-flower-tr" aria-hidden="true" />
+                <div className="honors-divider-line" style={{ width: '180px', margin: '22px auto 16px' }} />
 
-                <div className="patrika-side-header">
-                  <span className="side-badge">✦ SOLANKI PARIVAR ✦</span>
-                  <h3 className="side-member-name">Family Honors</h3>
-                </div>
+                {/* Nagotra Solanki Family Honors */}
+                <span className="honors-heading" style={{ fontSize: '11.5px', letterSpacing: '0.22em', marginBottom: '14px', color: '#92532a' }}>
+                  ✦ NAGOTRA SOLANKI FAMILY HONORS ✦
+                </span>
 
                 {/* Inviting with regards */}
                 <div className="honors-block">
