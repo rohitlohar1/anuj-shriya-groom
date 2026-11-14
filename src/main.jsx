@@ -980,7 +980,7 @@ export default function App() {
               <Sparkles size={18} className="crest-icon" />
             </div>
             <span className="card-kicker">SACRED HERITAGE & ELDERS’ BLESSINGS</span>
-            <h2 className="section-title">The Blessed Families</h2>
+            <h2 className="section-title">The Bride’s Family</h2>
             <p className="section-lead">Rooted in tradition, values, and boundless ancestral blessings.</p>
 
             <div className="patrika-grid">
@@ -1013,39 +1013,7 @@ export default function App() {
 
                 <div className="lineage-place">
                   <MapPin size={12} />
-                  <span>Novi (USA) / Pune</span>
-                </div>
-              </div>
-
-              {/* Auspicious Union Ornament */}
-              <div className="patrika-connector" aria-hidden="true">
-                <span className="connector-line" />
-                <span className="connector-badge">❦</span>
-                <span className="connector-line" />
-              </div>
-
-              {/* Groom's Family Side */}
-              <div className="patrika-side-card groom-side">
-                <div className="patrika-side-header">
-                  <span className="side-badge">वर पक्ष · GROOM’S FAMILY</span>
-                  <h3 className="side-member-name">Anuj Kothari</h3>
-                </div>
-
-                <div className="lineage-item">
-                  <span className="lineage-rel">Grandson of</span>
-                  <b className="lineage-name">Late Smt. & Shri Shobha Jethmal Kothari</b>
-                </div>
-
-                <div className="lineage-divider-mini" />
-
-                <div className="lineage-item">
-                  <span className="lineage-rel">Son of</span>
-                  <b className="lineage-name">Smt. Bindu & Shri Rakesh Kothari</b>
-                </div>
-
-                <div className="lineage-place">
-                  <MapPin size={12} />
-                  <span>Badgaon, Chennai</span>
+                  <span>Novi, Pune</span>
                 </div>
               </div>
             </div>
