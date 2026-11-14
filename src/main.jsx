@@ -49,6 +49,37 @@ const photos = [
   },
 ];
 
+const MYRA_PATRIKA_DATA = {
+  quote: '“नाना - नानी का आशीर्वाद, मामा - मामी का प्यार,\nमायरे की रस्म में छुपे हैं अनगिनत जज़्बात।”',
+  eldersBadge: 'बुज़ुर्गों का आशीर्वाद · NANA - NANI',
+  eldersSubtitle: 'Ancestral Blessings & Eternal Guiding Light',
+  elderName: 'Late Smt. Ratnibai Premchandji Gulabchandji Shrishrimal',
+  elderOrigin: '(Naya Jogapura) · Karjat',
+  mamasBadge: 'मायरा मुख्य अतिथि · MAMAS & MAMIS',
+  mamasSubtitle: 'Maternal Family & Main Honored Guests (Mosalu)',
+  mamasCouples: [
+    { wife: 'Madiya', husband: 'Kishorji' },
+    { wife: 'Neelam', husband: 'Vikeshji' },
+    { wife: 'Reena', husband: 'Manojji' },
+    { wife: 'Shobha', husband: 'Ranjeetji' },
+    { wife: 'Ritu', husband: 'Pratikji' },
+    { wife: 'Sangeeta', husband: 'Dineshji' },
+    { wife: 'Ruchika', husband: 'Shrayji' }
+  ],
+  daughters: 'Risha, Krisha',
+  cousinsBadge: 'स्नेही स्वजन · FAMILY & COUSINS',
+  cousinsSubtitle: 'Loving Cousins & Cherished Family Pairs',
+  cousinsCouples: [
+    { wife: 'Priyanka', husband: 'Vishalji' },
+    { wife: 'Ritika', husband: 'Koresji' },
+    { wife: 'Sejal', husband: 'Vishekji' },
+    { wife: 'Rinisha', husband: 'Yashji' }
+  ],
+  manwarBadge: 'मीठी मनुहार · MITHI MANWAR',
+  manwarSubtitle: 'Sweet greetings and warm welcome from our little ones',
+  manwarKids: ['Agastya', 'Shanay', 'Anaira', 'Anaysha', 'Jinaya', 'Aahana', 'Khyana']
+};
+
 const events = [
   // DAY 1
   { 
@@ -72,24 +103,7 @@ const events = [
     detail: 'The deeply cherished traditional Mayra (Mamera) ceremony honoring the bride’s mother, Smt. Sharmila Solanki, welcoming maternal uncles and family with joyous folk songs, sacred gifts, and heartfelt blessings, followed by an exquisite royal lunch feast.', 
     tag: 'Sacred Tradition',
     icon: '✧',
-    myraDetails: {
-      quote: '“नाना - नानी का आशीर्वाद, मामा - मामी\nमायरे की रस्म में छुपे हैं अनगिनत जज़्बात।”',
-      eldersBadge: 'बुज़ुर्गों का आशीर्वाद · NANA - NANI',
-      eldersSubtitle: 'Ancestral Blessings & Eternal Guiding Light',
-      elderName: 'Late Smt. Ratnibai Premchandji Gulabchandji Shrishrimal',
-      elderOrigin: '(Naya Jogapura) · Karjat',
-      mamasBadge: 'मायरा मुख्य अतिथि · MAMAS & MAMIS',
-      mamasSubtitle: 'Maternal Family & Main Honored Guests (Mosalu)',
-      couples: [
-        { wife: 'Madiya', husband: 'Kishorji' },
-        { wife: 'Shobha', husband: 'Ranjeetji' },
-        { wife: 'Sangeeta', husband: 'Dineshji' },
-        { wife: 'Reena', husband: 'Manojji' },
-        { wife: 'Ritu', husband: 'Pratikji' },
-        { wife: 'Ruchika', husband: 'Shrayji' },
-        { wife: 'Risha', husband: 'Krisha', isNextGen: true }
-      ]
-    } 
+    myraDetails: MYRA_PATRIKA_DATA
   },
   { 
     day: 1,
@@ -1016,20 +1030,123 @@ export default function App() {
                   <span>Novi, Pune</span>
                 </div>
               </div>
+
+              {/* Solanki Parivar Family Honors */}
+              <div className="patrika-side-card honors-side">
+                <div className="patrika-side-header">
+                  <span className="side-badge">✦ SOLANKI PARIVAR ✦</span>
+                  <h3 className="side-member-name">Family Honors</h3>
+                </div>
+
+                {/* Inviting with regards */}
+                <div className="honors-block">
+                  <span className="honors-heading">Inviting with Regards</span>
+                  <p className="honors-names-text">
+                    Hirachand, Champalal, Arvind, Suresh, Ashok, Dhiraj, Kishor,<br />
+                    Kalpesh, Shailesh, Dr. Rahul, Rushant, Anish, Jainil
+                  </p>
+                </div>
+
+                <div className="honors-divider-line" />
+
+                {/* Inviting with pleasure */}
+                <div className="honors-block">
+                  <span className="honors-heading">Inviting with Pleasure</span>
+                  <div className="honors-boxes-grid">
+                    <div className="honors-box-item">
+                      <span className="honors-box-text">Anjana <span className="honors-box-amp">&</span> Champalalji</span>
+                    </div>
+                    <div className="honors-box-item">
+                      <span className="honors-box-text">Sharmila <span className="honors-box-amp">&</span> Kishorji</span>
+                    </div>
+                    <div className="honors-box-item">
+                      <span className="honors-box-text">Anjana <span className="honors-box-amp">&</span> Ashokji</span>
+                    </div>
+                    <div className="honors-box-item">
+                      <span className="honors-box-text">Sangeeta <span className="honors-box-amp">&</span> Kalpeshji</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="honors-divider-line" />
+
+                {/* Special Request */}
+                <div className="honors-block">
+                  <span className="honors-heading">Special Request</span>
+                  <div className="honors-boxes-grid">
+                    <div className="honors-box-item">
+                      <span className="honors-box-text">Fancybai <span className="honors-box-amp">&</span> Tarachandji</span>
+                    </div>
+                    <div className="honors-box-item">
+                      <span className="honors-box-text">Seema <span className="honors-box-amp">&</span> Vikramji</span>
+                    </div>
+                    <div className="honors-box-item">
+                      <span className="honors-box-text">Ushabai <span className="honors-box-amp">&</span> Rameshji</span>
+                    </div>
+                    <div className="honors-box-item">
+                      <span className="honors-box-text">Shweta <span className="honors-box-amp">&</span> Chetanji</span>
+                    </div>
+                    <div className="honors-box-item">
+                      <span className="honors-box-text">Vidya <span className="honors-box-amp">&</span> Rakeshji</span>
+                    </div>
+                    <div className="honors-box-item">
+                      <span className="honors-box-text">Komal <span className="honors-box-amp">&</span> Mohitji</span>
+                    </div>
+                    <div className="honors-box-item">
+                      <span className="honors-box-text">Varsha <span className="honors-box-amp">&</span> Rajendraji</span>
+                    </div>
+                    <div className="honors-box-item">
+                      <span className="honors-box-text">Kejal <span className="honors-box-amp">&</span> Priyankji</span>
+                    </div>
+                    <div className="honors-box-item full-width">
+                      <span className="honors-box-text">Garima, Khushi</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="honors-divider-line" />
+
+                {/* Samdhi Parivar */}
+                <div className="honors-block">
+                  <span className="honors-heading">Samdhi Parivar</span>
+                  <b className="honors-person-name">Sha. Rakeshji Jethmalji Kothari</b>
+                  <span className="honors-person-loc">Chennai, (Badgaon)</span>
+                </div>
+
+                <div className="honors-divider-line" />
+
+                {/* Nanihal Paksh */}
+                <div className="honors-block">
+                  <span className="honors-heading">Nanihal Paksh</span>
+                  <b className="honors-person-name">Sha. Premchandji Gulabchandji Shrishrimal</b>
+                  <span className="honors-person-loc">Karjat, (Naya Jogapura)</span>
+                </div>
+
+                <div className="honors-divider-line" />
+
+                {/* Best Wishes */}
+                <div className="honors-block">
+                  <span className="honors-heading">Best Wishes</span>
+                  <p className="honors-wishes-text">
+                    Veeram Distributor, Pune<br />
+                    Gautam Collection, Pune
+                  </p>
+                </div>
+              </div>
             </div>
 
             <div className="patrika-card-preview-action">
-              <button 
-                className="view-original-card-btn"
-                onClick={() => setCardModalOpen(true)}
-              >
-                <Eye size={15} /> View Official “We Said Yes” Announcement Card
-              </button>
               <button 
                 className="view-original-card-btn myra-callout-btn"
                 onClick={() => setMyraModalOpen(true)}
               >
                 <Sparkles size={15} /> View Mayra (Mamera) Patrika & Guest Honors
+              </button>
+              <button 
+                className="view-original-card-btn"
+                onClick={() => setCardModalOpen(true)}
+              >
+                <Eye size={15} /> View Official “We Said Yes” Announcement Card
               </button>
             </div>
           </section>
@@ -1277,9 +1394,9 @@ export default function App() {
                           <div className="myra-compact-card">
                             {/* Hindi Verse */}
                             <div className="myra-compact-verse-wrap">
-                              <span className="myra-compact-flourish">❦</span>
+                              <img src="/art/myra_floret.png" alt="" className="myra-compact-floret" aria-hidden="true" />
                               <p className="myra-compact-verse">
-                                “नाना - नानी का आशीर्वाद, मामा - मामी<br />
+                                “नाना - नानी का आशीर्वाद, मामा - मामी का प्यार,<br />
                                 मायरे की रस्म में छुपे हैं अनगिनत जज़्बात।”
                               </p>
                             </div>
@@ -1306,25 +1423,59 @@ export default function App() {
                               </div>
                               
                               <div className="myra-couples-grid">
-                                {event.myraDetails.couples.map((couple, cIdx) => (
-                                  <div 
-                                    key={cIdx} 
-                                    className={`myra-couple-pair ${couple.isNextGen ? 'next-gen' : ''}`}
-                                  >
+                                {event.myraDetails.mamasCouples.map((couple, cIdx) => (
+                                  <div key={cIdx} className="myra-couple-pair">
                                     <span className="couple-name">{couple.wife}</span>
                                     <span className="couple-amp">&</span>
                                     <span className="couple-name">{couple.husband}</span>
                                   </div>
                                 ))}
+                                {event.myraDetails.daughters && (
+                                  <div className="myra-couple-pair risha-krisha-pair">
+                                    <span className="couple-name">{event.myraDetails.daughters}</span>
+                                  </div>
+                                )}
                               </div>
                             </div>
+
+                            {/* Section 3: Family & Cousins */}
+                            {event.myraDetails.cousinsCouples && (
+                              <div className="myra-compact-section cousins-section">
+                                <div className="myra-compact-header">
+                                  <Sparkles size={11} className="myra-compact-icon" />
+                                  <span className="myra-compact-badge">{event.myraDetails.cousinsBadge}</span>
+                                </div>
+                                <div className="myra-couples-grid">
+                                  {event.myraDetails.cousinsCouples.map((couple, cIdx) => (
+                                    <div key={cIdx} className="myra-couple-pair next-gen">
+                                      <span className="couple-name">{couple.wife}</span>
+                                      <span className="couple-amp">&</span>
+                                      <span className="couple-name">{couple.husband}</span>
+                                    </div>
+                                  ))}
+                                </div>
+                              </div>
+                            )}
+
+                            {/* Section 4: Mithi Manwar */}
+                            {event.myraDetails.manwarKids && (
+                              <div className="myra-compact-section manwar-section">
+                                <div className="myra-compact-header">
+                                  <Heart size={11} className="myra-compact-icon" />
+                                  <span className="myra-compact-badge">{event.myraDetails.manwarBadge}</span>
+                                </div>
+                                <div className="myra-manwar-text">
+                                  {event.myraDetails.manwarKids.join(', ')}
+                                </div>
+                              </div>
+                            )}
 
                             <button
                               type="button"
                               className="myra-compact-patrika-btn"
                               onClick={() => setMyraModalOpen(true)}
                             >
-                              <Eye size={10} /> View Patrika
+                              <Eye size={10} /> View Full Patrika
                             </button>
                           </div>
                         )}
@@ -1620,6 +1771,12 @@ export default function App() {
             role="dialog"
             aria-label="Myra Function Patrika"
           >
+            {/* Floral Corner Ornaments */}
+            <img src="/art/myra_flower_tl.png" alt="" className="myra-flower-corner myra-flower-tl" aria-hidden="true" />
+            <img src="/art/myra_flower_tr.png" alt="" className="myra-flower-corner myra-flower-tr" aria-hidden="true" />
+            <img src="/art/myra_flower_bl.png" alt="" className="myra-flower-corner myra-flower-bl" aria-hidden="true" />
+            <img src="/art/myra_flower_br.png" alt="" className="myra-flower-corner myra-flower-br" aria-hidden="true" />
+
             <button 
               className="myra-modal-close"
               onClick={() => setMyraModalOpen(false)}
@@ -1635,9 +1792,9 @@ export default function App() {
             </div>
 
             <div className="myra-modal-quote-box">
-              <span className="myra-quote-ornament">❦</span>
+              <img src="/art/myra_floret.png" alt="" className="myra-flower-floret" aria-hidden="true" />
               <p className="myra-quote-hindi">
-                “नाना - नानी का आशीर्वाद, मामा - मामी<br />
+                “नाना - नानी का आशीर्वाद, मामा - मामी का प्यार,<br />
                 मायरे की रस्म में छुपे हैं अनगिनत जज़्बात।”
               </p>
             </div>
@@ -1646,45 +1803,81 @@ export default function App() {
             <div className="myra-modal-block elders-block">
               <div className="myra-modal-sec-badge">
                 <Sparkles size={13} />
-                <span>बुज़ुर्गों का आशीर्वाद · NANA - NANI</span>
+                <span>{MYRA_PATRIKA_DATA.eldersBadge}</span>
               </div>
-              <p className="myra-modal-sec-desc">Ancestral Blessings & Eternal Guiding Light</p>
+              <p className="myra-modal-sec-desc">{MYRA_PATRIKA_DATA.eldersSubtitle}</p>
               <div className="myra-modal-elder-card">
-                <b className="myra-modal-elder-name">Late Smt. Ratnibai Premchandji Gulabchandji Shrishrimal</b>
+                <b className="myra-modal-elder-name">{MYRA_PATRIKA_DATA.elderName}</b>
                 <span className="myra-modal-elder-place">
-                  <MapPin size={12} /> (Naya Jogapura) · Karjat
+                  <MapPin size={12} /> {MYRA_PATRIKA_DATA.elderOrigin}
                 </span>
               </div>
             </div>
 
-            {/* Lower Section: Mamas & Mamis (Main Guests) */}
+            {/* Middle Section: Mamas & Mamis (Main Guests) */}
             <div className="myra-modal-block mamas-block">
               <div className="myra-modal-sec-badge">
                 <Heart size={13} />
-                <span>मायरा मुख्य अतिथि · MAMAS & MAMIS</span>
+                <span>{MYRA_PATRIKA_DATA.mamasBadge}</span>
               </div>
-              <p className="myra-modal-sec-desc">Maternal Family & Main Honored Guests (Mosalu)</p>
+              <p className="myra-modal-sec-desc">{MYRA_PATRIKA_DATA.mamasSubtitle}</p>
 
               <div className="myra-modal-couples-grid">
-                {[
-                  { wife: 'Madiya', husband: 'Kishorji' },
-                  { wife: 'Shobha', husband: 'Ranjeetji' },
-                  { wife: 'Sangeeta', husband: 'Dineshji' },
-                  { wife: 'Reena', husband: 'Manojji' },
-                  { wife: 'Ritu', husband: 'Pratikji' },
-                  { wife: 'Ruchika', husband: 'Shrayji' },
-                  { wife: 'Risha', husband: 'Krisha', isNextGen: true }
-                ].map((couple, idx) => (
-                  <div key={idx} className={`myra-modal-couple-pill ${couple.isNextGen ? 'next-gen' : ''}`}>
+                {MYRA_PATRIKA_DATA.mamasCouples.map((couple, idx) => (
+                  <div key={idx} className="myra-modal-couple-row">
                     <span className="modal-couple-name">{couple.wife}</span>
                     <span className="modal-couple-amp">&</span>
                     <span className="modal-couple-name">{couple.husband}</span>
                   </div>
                 ))}
+                {MYRA_PATRIKA_DATA.daughters && (
+                  <div className="myra-modal-couple-row risha-krisha-pill">
+                    <span className="modal-couple-name">{MYRA_PATRIKA_DATA.daughters}</span>
+                  </div>
+                )}
               </div>
             </div>
 
+            {/* Section 3: Family & Cousins */}
+            {MYRA_PATRIKA_DATA.cousinsCouples && (
+              <div className="myra-modal-block cousins-block">
+                <div className="myra-modal-sec-badge">
+                  <Sparkles size={13} />
+                  <span>{MYRA_PATRIKA_DATA.cousinsBadge}</span>
+                </div>
+                <p className="myra-modal-sec-desc">{MYRA_PATRIKA_DATA.cousinsSubtitle}</p>
+
+                <div className="myra-modal-couples-grid">
+                  {MYRA_PATRIKA_DATA.cousinsCouples.map((couple, idx) => (
+                    <div key={idx} className="myra-modal-couple-row next-gen">
+                      <span className="modal-couple-name">{couple.wife}</span>
+                      <span className="modal-couple-amp">&</span>
+                      <span className="modal-couple-name">{couple.husband}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Section 4: Mithi Manwar */}
+            {MYRA_PATRIKA_DATA.manwarKids && (
+              <div className="myra-modal-block manwar-block">
+                <div className="myra-modal-sec-badge">
+                  <Heart size={13} />
+                  <span>{MYRA_PATRIKA_DATA.manwarBadge}</span>
+                </div>
+                <p className="myra-modal-sec-desc">{MYRA_PATRIKA_DATA.manwarSubtitle}</p>
+
+                <div className="myra-modal-manwar-box">
+                  <p className="myra-modal-kids-list">
+                    {MYRA_PATRIKA_DATA.manwarKids.join(', ')}
+                  </p>
+                </div>
+              </div>
+            )}
+
             <div className="myra-modal-footer">
+              <img src="/art/myra_floret.png" alt="" className="myra-flower-floret" aria-hidden="true" />
               <span className="myra-modal-time">Saturday, 23rd January 2027 · 10:00 AM IST</span>
               <span className="myra-modal-loc">Purohit Holiday Resort, Lonavala</span>
             </div>
