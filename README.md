@@ -55,7 +55,6 @@ A luxury mobile-first wedding invitation website for **Shriya Solanki & Anuj Kot
 - **Interactive 2-Day Timeline**: Filter between All Events, Day 1, and Day 2 with expandable ceremony details.
 - **Interactive Map & Directions**: Embedded live Google Map, direct navigation links, and one-tap address copying.
 - **Phool Vrushti**: Interactive flower petal shower button with live blessing counter and pleasant chime audio.
-- **Calendar & Share Integration**: Instant ICS calendar export for smartphones and Web Share API / WhatsApp sharing.
 
 ---
 
