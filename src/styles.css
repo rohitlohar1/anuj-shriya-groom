@@ -225,12 +225,9 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 16px;
+  padding: 12px 16px;
   z-index: 120;
   pointer-events: none;
-  background: linear-gradient(180deg, rgba(253, 250, 244, 0.95) 0%, rgba(253, 250, 244, 0.8) 65%, transparent 100%);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
 }
 
 .topbar-monogram {
