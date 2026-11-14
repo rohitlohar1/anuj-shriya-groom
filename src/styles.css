@@ -49,7 +49,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 50px;
+  scroll-padding-top: 65px;
 }
 
 body {
@@ -225,9 +225,12 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 16px;
+  padding: 10px 16px;
   z-index: 120;
   pointer-events: none;
+  background: linear-gradient(180deg, rgba(253, 250, 244, 0.95) 0%, rgba(253, 250, 244, 0.8) 65%, transparent 100%);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
 .topbar-monogram {
@@ -2545,111 +2548,148 @@ img {
 }
 
 .patrika-grid {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 16px;
   margin-top: 24px;
 }
 
-@media (min-width: 600px) {
-  .patrika-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 18px;
-  }
-}
-
 .patrika-side-card {
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(197, 160, 89, 0.45);
-  border-radius: 12px;
-  padding: 20px 16px;
+  background: radial-gradient(ellipse at top, #ffffff 0%, #fdfcf9 65%, #f9f3e6 100%);
+  border: 1.5px solid rgba(197, 160, 89, 0.55);
+  border-radius: 16px;
+  padding: 24px 20px 22px;
   text-align: center;
   position: relative;
-  box-shadow: 0 4px 14px rgba(122, 53, 34, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 
+    0 4px 18px rgba(122, 53, 34, 0.05),
+    inset 0 0 24px rgba(255, 255, 255, 0.9);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .patrika-side-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(122, 53, 34, 0.08);
+  box-shadow: 0 8px 24px rgba(122, 53, 34, 0.09);
 }
 
 .patrika-side-header {
   margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .side-badge {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-family: var(--sans);
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--wine);
+  color: var(--terracotta-deep);
   background: rgba(197, 160, 89, 0.18);
-  padding: 3px 10px;
+  padding: 4px 14px;
   border-radius: 20px;
-  border: 1px solid rgba(197, 160, 89, 0.4);
-  margin-bottom: 6px;
+  border: 1px solid rgba(197, 160, 89, 0.45);
+  margin-bottom: 8px;
+  box-shadow: 0 1px 4px rgba(122, 53, 34, 0.04);
 }
 
 .side-member-name {
   font-family: var(--display);
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--wine-deep);
-  letter-spacing: 0.05em;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--terracotta-deep);
+  letter-spacing: 0.04em;
+  line-height: 1.25;
 }
 
 .lineage-item {
-  margin: 10px 0;
+  margin: 11px 0;
 }
 
 .lineage-rel {
   display: block;
   font-family: var(--sans);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 2px;
+  color: var(--camel-deep);
+  margin-bottom: 3px;
 }
 
 .lineage-name {
   display: block;
   font-family: var(--serif);
-  font-size: 16px;
+  font-size: 17.5px;
   font-weight: 600;
   color: var(--ink);
   line-height: 1.35;
+  max-width: 340px;
+  margin: 0 auto;
 }
 
 .lineage-divider-mini {
-  width: 40px;
+  width: 50px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(197, 160, 89, 0.6), transparent);
-  margin: 10px auto;
+  background: linear-gradient(90deg, transparent, rgba(197, 160, 89, 0.65), transparent);
+  margin: 11px auto;
 }
 
 .lineage-place {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
+  gap: 6px;
   font-family: var(--sans);
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--wine-light);
-  background: rgba(122, 53, 34, 0.05);
-  padding: 4px 12px;
-  border-radius: 12px;
-  margin-top: 8px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--wine);
+  background: rgba(197, 160, 89, 0.14);
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+/* Auspicious Sacred Union Connector */
+.patrika-connector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 2px 0;
+}
+
+.patrika-connector .connector-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(197, 160, 89, 0.5), transparent);
+}
+
+.patrika-connector .connector-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, #ffffff 0%, #f7ecd9 100%);
+  border: 1px solid rgba(197, 160, 89, 0.55);
+  color: var(--camel-deep);
+  font-size: 13px;
+  box-shadow: 0 2px 6px rgba(122, 53, 34, 0.08);
 }
 
 .patrika-card-preview-action {
-  margin-top: 20px;
-  text-align: center;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 .view-original-card-btn {
@@ -2657,15 +2697,19 @@ img {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background: linear-gradient(135deg, rgba(197, 160, 89, 0.15), rgba(197, 160, 89, 0.28));
+  width: 100%;
+  max-width: 360px;
+  min-height: 44px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(247, 236, 206, 0.82) 100%);
   border: 1px solid var(--gold);
   border-radius: 24px;
-  padding: 10px 20px;
+  padding: 10px 18px;
   font-family: var(--sans);
-  font-size: 13px;
+  font-size: 11.5px;
   font-weight: 600;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
   color: var(--wine-deep);
+  box-shadow: 0 3px 10px rgba(122, 53, 34, 0.06);
   transition: all 0.25s ease;
 }
 
@@ -2673,7 +2717,12 @@ img {
   background: var(--gold);
   color: var(--wine-dark);
   transform: translateY(-1px);
-  box-shadow: 0 4px 16px rgba(197, 160, 89, 0.4);
+  box-shadow: 0 4px 16px rgba(197, 160, 89, 0.35);
+}
+
+.view-original-card-btn.myra-callout-btn {
+  background: linear-gradient(135deg, rgba(253, 248, 236, 0.95) 0%, rgba(243, 226, 188, 0.85) 100%);
+  border-color: rgba(184, 131, 77, 0.6);
 }
 
 /* 2-Day Schedule Tabs */
@@ -2829,9 +2878,12 @@ img {
    ========================================================================== */
 
 .maternal-lineage-item {
-  background: rgba(204, 160, 88, 0.08);
-  border-radius: 8px;
-  padding: 6px 10px;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.95) 0%, rgba(249, 240, 222, 0.75) 100%);
+  border: 1px dashed rgba(197, 160, 89, 0.55);
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin: 12px auto;
+  max-width: 340px;
 }
 
 .lineage-sub-loc {
@@ -2840,7 +2892,7 @@ img {
   color: var(--camel-deep);
   font-weight: 600;
   display: block;
-  margin-top: 2px;
+  margin-top: 3px;
 }
 
 .myra-callout-btn {

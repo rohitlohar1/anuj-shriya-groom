@@ -808,18 +808,6 @@ export default function App() {
           </a>
 
           <div className="topbar-actions">
-            {phase === 'entered' && (
-              <button
-                className="blessing-top-btn"
-                onClick={showerBlessings}
-                aria-label="Shower flower blessings"
-                title="Shower flower blessings"
-              >
-                <span className="bless-icon">🌸</span>
-                <span className="bless-text">Bless</span>
-              </button>
-            )}
-
             <button
               className={`sound-toggle ${audioSystem.playing ? 'playing' : ''}`}
               onClick={audioSystem.toggle}
@@ -1029,6 +1017,13 @@ export default function App() {
                 </div>
               </div>
 
+              {/* Auspicious Union Ornament */}
+              <div className="patrika-connector" aria-hidden="true">
+                <span className="connector-line" />
+                <span className="connector-badge">❦</span>
+                <span className="connector-line" />
+              </div>
+
               {/* Groom's Family Side */}
               <div className="patrika-side-card groom-side">
                 <div className="patrika-side-header">
@@ -1057,7 +1052,7 @@ export default function App() {
 
             <div className="patrika-card-preview-action">
               <button 
-                className="view-original-card-btn mb-5"
+                className="view-original-card-btn"
                 onClick={() => setCardModalOpen(true)}
               >
                 <Eye size={15} /> View Official “We Said Yes” Announcement Card
