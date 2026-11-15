@@ -711,7 +711,7 @@ function SubscriptionStoryCard({ audioSystem, onShowerBlessings, showToast }) {
                 <Check size={12} /> Status: 100% Love-Tested & Verified
               </div>
               <ul className="plan-perks-list">
-                <li><span className="perk-bullet">✓</span> <b>2,557 Days:</b> Countless chai dates, late-night talks & adventures</li>
+                <li><span className="perk-bullet">✓</span> <b>2,557 Days:</b> Countless coffee dates, late-night talks & adventures</li>
                 <li><span className="perk-bullet">✓</span> <b>10,000+ Memes:</b> Exchanged, decoded, and laughed at together</li>
                 <li><span className="perk-bullet">✓</span> <b>Travel Tested:</b> Conquered road trips, flights & wanderlust</li>
                 <li><span className="perk-bullet">✓</span> <b>Family Rating:</b> Both families approved with 100% royal blessings</li>
