@@ -59,11 +59,11 @@ const MYRA_PATRIKA_DATA = {
   mamasSubtitle: 'Maternal Family & Main Honored Guests (Mosalu)',
   mamasCouples: [
     { wife: 'Madiya', husband: 'Kishorji' },
-    { wife: 'Neelam', husband: 'Vikeshji' },
-    { wife: 'Reena', husband: 'Manojji' },
     { wife: 'Shobha', husband: 'Ranjeetji' },
-    { wife: 'Ritu', husband: 'Pratikji' },
     { wife: 'Sangeeta', husband: 'Dineshji' },
+    { wife: 'Reena', husband: 'Manojji' },
+    { wife: 'Neelam', husband: 'Vikeshji' },
+    { wife: 'Ritu', husband: 'Pratikji' },
     { wife: 'Ruchika', husband: 'Shrayji' }
   ],
   daughters: 'Risha, Krisha',
