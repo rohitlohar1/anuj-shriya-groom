@@ -4,7 +4,7 @@ import {
   ArrowUpRight, ArrowLeft, ArrowRight, 
   CalendarDays, MapPin, VolumeX, X, 
   Plus, Minus, Heart, Share2, Maximize2, 
-  Sparkles, Copy, Navigation, Clock, Compass, ChevronDown, Check, Eye
+  Sparkles, Copy, Navigation, Clock, Compass, ChevronDown, Check, Eye, BadgeCheck
 } from 'lucide-react';
 import './styles.css';
 
@@ -602,6 +602,222 @@ function ScratchDate({ onCalendar }) {
   );
 }
 
+function SubscriptionStoryCard({ audioSystem, onShowerBlessings, showToast }) {
+  const [activePlan, setActivePlan] = useState('lifetime'); // 'trial' | 'lifetime'
+  const [stamped, setStamped] = useState(false);
+
+  const handleStamp = () => {
+    if (!stamped) {
+      setStamped(true);
+      audioSystem?.playChimeSound(783.99, 0.25);
+      if (navigator?.vibrate) navigator.vibrate([35, 60, 35]);
+      onShowerBlessings?.();
+      showToast?.('🎉 Official Subscription Stamped: Lifetime Plan Activated!');
+    } else {
+      audioSystem?.playChimeSound(523.25, 0.1);
+      showToast?.('❤️ Subscribed for 7 Lifetimes · Shriya & Anuj');
+    }
+  };
+
+  const switchPlan = (plan) => {
+    setActivePlan(plan);
+    audioSystem?.playChimeSound(plan === 'lifetime' ? 659.25 : 523.25, 0.08);
+  };
+
+  return (
+    <section className="subscription-section wedding-card" id="our-story">
+      <CornerOrnaments />
+      <div className="section-crest">
+        <Sparkles size={18} className="crest-icon" />
+      </div>
+      <span className="card-kicker">A 7-YEAR LOVE STORY · 2020 TO FOREVER</span>
+      <h2 className="section-title">The Permanent Subscription</h2>
+      <p className="section-lead">7 years in the making. 2,557 days of laughter. Now making it forever.</p>
+
+      {/* The Quote Banner */}
+      <div className="trial-quote-banner">
+        <span className="trial-quote-decor">❦</span>
+        <blockquote className="trial-quote-text">
+          “After 7 years of trial membership, we’ve decided to subscribe permanently. Join us as we finally make it official!”
+        </blockquote>
+        <div className="trial-quote-signoff">
+          <span>With eternal love & laughter,</span>
+          <b>Shriya & Anuj</b>
+        </div>
+      </div>
+
+      {/* The Digital VIP Membership Pass */}
+      <div className={`membership-pass-card ${stamped ? 'stamped' : ''}`}>
+        <div className="membership-pass-glow" aria-hidden="true" />
+        
+        {/* Pass Header */}
+        <div className="pass-header">
+          <div className="pass-brand">
+            <span className="pass-monogram">S ❦ A</span>
+            <div className="pass-title-wrap">
+              <span className="pass-title">OFFICIAL MEMBERSHIP PASS</span>
+              <span className="pass-id">ID: #SA-2020-2027-VIVAH</span>
+            </div>
+          </div>
+          <div className="pass-chip-wrap" title="Royal Golden Chip" aria-hidden="true">
+            <div className="pass-chip">
+              <span className="chip-line" />
+              <span className="chip-line" />
+            </div>
+          </div>
+        </div>
+
+        {/* Member Names & Tier Status */}
+        <div className="pass-member-info">
+          <div className="pass-member-names-wrap">
+            <span className="pass-label">PRIMARY ACCOUNT HOLDERS</span>
+            <h3 className="pass-member-names">Shriya Jain & Anuj Kothari</h3>
+          </div>
+          <div className={`pass-tier-pill ${stamped ? 'pill-stamped' : ''}`}>
+            <BadgeCheck size={13} />
+            <span>{stamped ? 'PERMANENT SUBSCRIBER' : 'TRIAL UPGRADE READY'}</span>
+          </div>
+        </div>
+
+        {/* Interactive Plan Switcher Tabs */}
+        <div className="pass-plan-tabs" role="tablist" aria-label="Compare 7-Year Trial and Lifetime Plans">
+          <button 
+            type="button"
+            role="tab"
+            aria-selected={activePlan === 'trial'}
+            className={`plan-tab-btn ${activePlan === 'trial' ? 'active' : ''}`}
+            onClick={() => switchPlan('trial')}
+          >
+            <span className="tab-duration">2020 – 2027</span>
+            <span className="tab-name">7-Year Free Trial</span>
+          </button>
+          <button 
+            type="button"
+            role="tab"
+            aria-selected={activePlan === 'lifetime'}
+            className={`plan-tab-btn ${activePlan === 'lifetime' ? 'active' : ''}`}
+            onClick={() => switchPlan('lifetime')}
+          >
+            <span className="tab-duration">2027 – FOREVER</span>
+            <span className="tab-name">★ Lifetime Plan</span>
+          </button>
+        </div>
+
+        {/* Plan Details Body */}
+        <div className="pass-plan-content">
+          {activePlan === 'trial' ? (
+            <div className="plan-detail-view trial-view">
+              <div className="plan-status-badge trial">
+                <Check size={12} /> Status: 100% Love-Tested & Verified
+              </div>
+              <ul className="plan-perks-list">
+                <li><span className="perk-bullet">✓</span> <b>2,557 Days:</b> Countless chai dates, late-night talks & adventures</li>
+                <li><span className="perk-bullet">✓</span> <b>10,000+ Memes:</b> Exchanged, decoded, and laughed at together</li>
+                <li><span className="perk-bullet">✓</span> <b>Travel Tested:</b> Conquered road trips, flights & wanderlust</li>
+                <li><span className="perk-bullet">✓</span> <b>Family Rating:</b> Both families approved with 100% royal blessings</li>
+              </ul>
+              <div className="plan-verdict-note">
+                Verdict: <i>Trial period completed with zero returns. Upgrading immediately!</i>
+              </div>
+            </div>
+          ) : (
+            <div className="plan-detail-view lifetime-view">
+              <div className="plan-status-badge lifetime">
+                <Sparkles size={12} /> Status: Permanent Lifetime Vivah Tier
+              </div>
+              <ul className="plan-perks-list">
+                <li><span className="perk-bullet">★</span> <b>Sacred Saptapadi:</b> Seven pheras, seven vows, seven lifetimes</li>
+                <li><span className="perk-bullet">★</span> <b>Wardrobe Clause:</b> Shriya gets 80% closet space (Anuj signed off 😉)</li>
+                <li><span className="perk-bullet">★</span> <b>Forever Co-Pilot:</b> Guaranteed plus-one for every trip & late snack</li>
+                <li><span className="perk-bullet">★</span> <b>Terms & Conditions:</b> Non-cancellable, non-refundable, infinite love</li>
+              </ul>
+              <div className="plan-verdict-note">
+                Celebration: <i>Join us at Purohit Resort, Lonavala on Jan 23 & 24, 2027!</i>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Pass Footer / Official Stamp Action */}
+        <div className="pass-footer">
+          <div className="pass-validity">
+            <span className="pass-label">EFFECTIVE DATE</span>
+            <span className="pass-val">24th January 2027</span>
+          </div>
+          <div className="pass-stamp-action">
+            <button 
+              className={`pass-stamp-btn ${stamped ? 'is-stamped' : ''}`}
+              onClick={handleStamp}
+              type="button"
+              aria-label="Stamp membership pass to confirm permanent subscription"
+            >
+              {stamped ? (
+                <>
+                  <Check size={13} /> Subscribed Permanently
+                </>
+              ) : (
+                <>
+                  <Sparkles size={13} /> Stamp to Confirm Upgrade
+                </>
+              )}
+            </button>
+          </div>
+        </div>
+
+        {/* Rubber Stamp Overlay when stamped */}
+        {stamped && (
+          <div className="official-stamp-mark" aria-hidden="true">
+            <div className="stamp-box">
+              <span className="stamp-top">OFFICIAL VIVAH</span>
+              <span className="stamp-mid">SUBSCRIBED</span>
+              <span className="stamp-bot">JAN 24 · 2027</span>
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* 7 Years By the Numbers Strip */}
+      <div className="story-metrics-grid">
+        <div className="metric-box">
+          <b>7</b>
+          <span>YEARS DATING</span>
+        </div>
+        <div className="metric-box">
+          <b>2,557</b>
+          <span>DAYS TOGETHER</span>
+        </div>
+        <div className="metric-box">
+          <b>100+</b>
+          <span>ROAD TRIPS</span>
+        </div>
+        <div className="metric-box">
+          <b>∞</b>
+          <span>LIFETIMES AHEAD</span>
+        </div>
+      </div>
+
+      {/* Playful Trial Customer Reviews */}
+      <div className="trial-reviews-section">
+        <span className="reviews-title">✦ 5-STAR TRIAL USER REVIEWS ✦</span>
+        <div className="reviews-cards">
+          <div className="review-bubble">
+            <div className="review-rating">★★★★★</div>
+            <p className="review-text">“Best 7-year trial ever! Never had any doubts. Can’t wait to subscribe permanently and spend my life with her.”</p>
+            <span className="review-author">— Anuj (Verified Subscriber)</span>
+          </div>
+          <div className="review-bubble">
+            <div className="review-rating">★★★★★</div>
+            <p className="review-text">“10/10 experience! Patient, hilarious, and makes the best coffee. Permanent contract officially approved!”</p>
+            <span className="review-author">— Shriya (Verified Subscriber)</span>
+          </div>
+        </div>
+      </div>
+
+      <WeddingDivider symbol="❦" />
+    </section>
+  );
+}
+
 export default function App() {
   const [phase, setPhase] = useState('sealed');
   const [slide, setSlide] = useState(0);
@@ -1006,7 +1222,7 @@ export default function App() {
 
                 <div className="patrika-side-header">
                   <span className="side-badge">वधू पक्ष · NAGOTRA SOLANKI FAMILY</span>
-                  <h3 className="side-member-name">Shriya Solanki</h3>
+                  <h3 className="side-member-name">Shriya Jain</h3>
                 </div>
 
                 <div className="lineage-item">
@@ -1190,7 +1406,14 @@ export default function App() {
             </div>
           </section>
 
-          {/* Section 6: Cherished Moments & Gallery */}
+          {/* Section 6: Our 7-Year Story · The Permanent Subscription */}
+          <SubscriptionStoryCard 
+            audioSystem={audioSystem} 
+            onShowerBlessings={showerBlessings} 
+            showToast={showToast} 
+          />
+
+          {/* Section 7: Cherished Moments & Gallery */}
           <section className="moments-section wedding-card" id="moments">
             <CornerOrnaments />
             <div className="section-crest">
@@ -1198,7 +1421,7 @@ export default function App() {
             </div>
             <span className="card-kicker">OUR CHERISHED MOMENTS</span>
             <h2 className="section-title">Glimpses of Us</h2>
-            <p className="section-lead">A few gentle frames. A lifetime of happiness.</p>
+            <p className="section-lead">7 years of beautiful memories, thousands of smiles, and a lifetime of happiness ahead.</p>
 
             <div
               className="photo-carousel"
