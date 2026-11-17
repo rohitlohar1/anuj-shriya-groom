@@ -21,31 +21,31 @@ const photos = [
     id: 1, 
     caption: 'In your embrace, every step feels like coming home.', 
     tag: 'Joyful Forever', 
-    alt: 'Shriya and Anuj joyful amidst lush hillside meadows' 
+    alt: 'Shriya and Anujji joyful amidst lush hillside meadows' 
   },
   { 
     id: 4, 
     caption: 'The smile that lights up every single tomorrow.', 
     tag: 'Endless Sunshine', 
-    alt: 'Shriya and Anuj sharing an affectionate moment together' 
+    alt: 'Shriya and Anujji sharing an affectionate moment together' 
   },
   { 
     id: 3, 
     caption: 'Held tight in love that words can scarcely hold.', 
     tag: 'Pure Warmth', 
-    alt: 'Shriya embracing Anuj outdoors with happiness' 
+    alt: 'Shriya embracing Anujji outdoors with happiness' 
   },
   { 
     id: 2, 
     caption: 'Two hands, one destined path into infinity.', 
     tag: 'Sacred Touch', 
-    alt: 'Shriya and Anuj reaching towards each other on a scenic road' 
+    alt: 'Shriya and Anujji reaching towards each other on a scenic road' 
   },
   { 
     id: 5, 
     caption: 'Held close and promised for a lifetime.', 
     tag: 'Eternal Promise', 
-    alt: 'Shriya and Anuj with hands interlocked showing the engagement ring' 
+    alt: 'Shriya and Anujji with hands interlocked showing the engagement ring' 
   },
 ];
 
@@ -134,9 +134,9 @@ const events = [
     dayLabel: 'Day 2 — Sunday, 24th January 2027',
     dateShort: '24 Jan 2027',
     time: '10:30 AM', 
-    title: 'Anuj ki Baarat', 
+    title: 'Anujji ki Baarat', 
     sanskrit: 'अनुज की शाही बारात एवं वर निकासी',
-    detail: 'The groom’s grand royal procession! Join Anuj with vibrant safas, dancing to energetic dhol beats and brass brass band music as we joyfully make our way to the wedding venue mandap.', 
+    detail: 'The groom’s grand royal procession! Join Anujji with vibrant safas, dancing to energetic dhol beats and brass brass band music as we joyfully make our way to the wedding venue mandap.', 
     tag: 'Royal Baraat',
     icon: '❖' 
   },
@@ -147,7 +147,7 @@ const events = [
     time: '1:15 PM', 
     title: 'Hastmilap & Lunch (The Auspicious Wedding)', 
     sanskrit: 'शुभ हस्तमिलाप, सप्तपदी फेरे एवं प्रीतिभोज',
-    detail: 'The eternal union of Shriya & Anuj! The sacred Vedic rituals, Hastamelap, Kanyadaan, circumambulation of the holy Agni (Mangalpheras), and eternal Saptapadi vows, followed by a celebratory wedding feast (Preeti Bhoj).', 
+    detail: 'The eternal union of Shriya & Anujji! The sacred Vedic rituals, Hastamelap, Kanyadaan, circumambulation of the holy Agni (Mangalpheras), and eternal Saptapadi vows, followed by a celebratory wedding feast (Preeti Bhoj).', 
     tag: 'Auspicious Muhurat',
     icon: '♡' 
   },
@@ -615,7 +615,7 @@ function SubscriptionStoryCard({ audioSystem, onShowerBlessings, showToast }) {
       showToast?.('🎉 Official Subscription Stamped: Lifetime Plan Activated!');
     } else {
       audioSystem?.playChimeSound(523.25, 0.1);
-      showToast?.('❤️ Subscribed for 7 Lifetimes · Shriya & Anuj');
+      showToast?.('❤️ Subscribed for 7 Lifetimes · Shriya & Anujji');
     }
   };
 
@@ -642,7 +642,7 @@ function SubscriptionStoryCard({ audioSystem, onShowerBlessings, showToast }) {
         </blockquote>
         <div className="trial-quote-signoff">
           <span>With eternal love & laughter,</span>
-          <b>Shriya & Anuj</b>
+          <b>Shriya & Anujji</b>
         </div>
       </div>
 
@@ -671,7 +671,7 @@ function SubscriptionStoryCard({ audioSystem, onShowerBlessings, showToast }) {
         <div className="pass-member-info">
           <div className="pass-member-names-wrap">
             <span className="pass-label">PRIMARY ACCOUNT HOLDERS</span>
-            <h3 className="pass-member-names">Shriya Jain & Anuj Kothari</h3>
+            <h3 className="pass-member-names">Shriya Jain & Anujji Kothari</h3>
           </div>
           <div className={`pass-tier-pill ${stamped ? 'pill-stamped' : ''}`}>
             <BadgeCheck size={13} />
@@ -727,7 +727,7 @@ function SubscriptionStoryCard({ audioSystem, onShowerBlessings, showToast }) {
               </div>
               <ul className="plan-perks-list">
                 <li><span className="perk-bullet">★</span> <b>Sacred Saptapadi:</b> Seven pheras, seven vows, seven lifetimes</li>
-                <li><span className="perk-bullet">★</span> <b>Wardrobe Clause:</b> Shriya gets 80% closet space (Anuj signed off 😉)</li>
+                <li><span className="perk-bullet">★</span> <b>Wardrobe Clause:</b> Shriya gets 80% closet space (Anujji signed off 😉)</li>
                 <li><span className="perk-bullet">★</span> <b>Forever Co-Pilot:</b> Guaranteed plus-one for every trip & late snack</li>
                 <li><span className="perk-bullet">★</span> <b>Terms & Conditions:</b> Non-cancellable, non-refundable, infinite love</li>
               </ul>
@@ -803,7 +803,7 @@ function SubscriptionStoryCard({ audioSystem, onShowerBlessings, showToast }) {
           <div className="review-bubble">
             <div className="review-rating">★★★★★</div>
             <p className="review-text">“Best 7-year trial ever! Never had any doubts. Can’t wait to subscribe permanently and spend my life with her.”</p>
-            <span className="review-author">— Anuj (Verified Subscriber)</span>
+            <span className="review-author">— Anujji (Verified Subscriber)</span>
           </div>
           <div className="review-bubble">
             <div className="review-rating">★★★★★</div>
@@ -913,9 +913,9 @@ export default function App() {
       'DTSTAMP:20261103T000000Z',
       'DTSTART:20270123T023000Z',
       'DTEND:20270124T123000Z',
-      'SUMMARY:Shriya & Anuj Royal Wedding Celebration',
+      'SUMMARY:Shriya & Anujji Royal Wedding Celebration',
       'LOCATION:Purohit Holiday Resort\\, Chhatrapati Shivaji Maharaj Road\\, Near ST Bus Stand\\, Lonavala\\, Maharashtra 410401',
-      'DESCRIPTION:Nagotra Solanki family welcomes you to celebrate the wedding of Shriya & Anuj. Day 1 (Jan 23): Jaan Swagat (8 AM), Mayra of Sharmila Solanki (10 AM), Carnival & High Tea (2 PM), Sangeet (6:30 PM). Day 2 (Jan 24): Anuj ki Baarat (10:30 AM), Hastmilap & Lunch (1:15 PM IST).',
+      'DESCRIPTION:Nagotra Solanki family welcomes you to celebrate the wedding of Shriya & Anujji. Day 1 (Jan 23): Jaan Swagat (8 AM), Mayra of Sharmila Solanki (10 AM), Carnival & High Tea (2 PM), Sangeet (6:30 PM). Day 2 (Jan 24): Anujji ki Baarat (10:30 AM), Hastmilap & Lunch (1:15 PM IST).',
       'END:VEVENT',
       'END:VCALENDAR'
     ];
@@ -923,7 +923,7 @@ export default function App() {
     const url = URL.createObjectURL(new Blob([content], { type: 'text/calendar;charset=utf-8' }));
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'Shriya-Anuj-Wedding.ics';
+    a.download = 'Shriya-Anujji-Wedding.ics';
     a.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
     showToast('Wedding celebration saved to calendar file!');
@@ -932,8 +932,8 @@ export default function App() {
   const share = async () => {
     try {
       const data = {
-        title: 'Shriya & Anuj — Royal Wedding Celebration',
-        text: 'With immense joy and the blessings of our elders, Nagotra Solanki family welcomes you to celebrate the wedding of Shriya & Anuj on 23rd & 24th January 2027 at Purohit Holiday Resort, Lonavala.',
+        title: 'Shriya & Anujji — Royal Wedding Celebration',
+        text: 'With immense joy and the blessings of our elders, Nagotra Solanki family welcomes you to celebrate the wedding of Shriya & Anujji on 23rd & 24th January 2027 at Purohit Holiday Resort, Lonavala.',
         url: window.location.href
       };
       if (navigator.share) {
@@ -979,7 +979,7 @@ export default function App() {
       setFallingPetals(prev => prev.filter(p => !newPetals.includes(p)));
     }, 4500);
 
-    showToast('🌸 Heartfelt blessings showered upon Shriya & Anuj!');
+    showToast('🌸 Heartfelt blessings showered upon Shriya & Anujji!');
   }, [audioSystem, showToast]);
 
   const handleDoubleTapPhoto = () => {
@@ -1059,7 +1059,7 @@ export default function App() {
 
         {/* Opening Velvet Doors Scene */}
         {phase !== 'entered' && (
-          <div className={`opening-scene ${phase}`} aria-label="Open Shriya and Anuj’s wedding invitation">
+          <div className={`opening-scene ${phase}`} aria-label="Open Shriya and Anujji’s wedding invitation">
             <div className="intro-curtains" aria-hidden="true">
               <div className="curtain-panel curtain-left" />
               <div className="curtain-panel curtain-right" />
@@ -1081,7 +1081,7 @@ export default function App() {
                     <button
                       className="invitation-seal"
                       onClick={() => enter(true)}
-                      aria-label="Open Shriya and Anuj’s wedding invitation with music"
+                      aria-label="Open Shriya and Anujji’s wedding invitation with music"
                     >
                       <span className="seal-outer-rim" />
                       <span className="seal-flower">❦</span>
@@ -1141,7 +1141,7 @@ export default function App() {
                 <h1>
                   <span className="name-bride">Shriya</span>
                   <i className="ampersand">&</i>
-                  <span className="name-groom">Anuj</span>
+                  <span className="name-groom">Anujji</span>
                 </h1>
                 <p className="herald-tag">Joyfully invite you to celebrate their wedding</p>
               </div>
@@ -1188,7 +1188,7 @@ export default function App() {
             <h2 className="section-title">A Garden of Forever</h2>
             
             <p className="note-text lead">
-              With the graceful blessings of our revered elders, grandparents, and the Almighty, Nagotra Solanki family welcomes you to celebrate the wedding of Shriya & Anuj in scenic Lonavala.
+              With the graceful blessings of our revered elders, grandparents, and the Almighty, Nagotra Solanki family welcomes you to celebrate the wedding of Shriya & Anujji in scenic Lonavala.
             </p>
             
             <p className="note-text">
@@ -1197,7 +1197,7 @@ export default function App() {
 
             <div className="script-signature">
               <span>With eternal love & respect,</span>
-              <b>Shriya & Anuj</b>
+              <b>Shriya & Anujji</b>
               <Heart size={14} className="heart-pulse" />
             </div>
             <WeddingDivider symbol="✿" />
@@ -1811,14 +1811,14 @@ export default function App() {
             <span className="card-kicker">PHOOL VRUSHTI · SHOWER BLESSINGS</span>
             <h2 className="section-title">Shower Your Blessings</h2>
             <p className="section-lead">
-              Tap below to shower auspicious rose and marigold petals upon Shriya & Anuj!
+              Tap below to shower auspicious rose and marigold petals upon Shriya & Anujji!
             </p>
 
             <div className="blessing-interactive-core">
               <button
                 className="shower-flower-btn"
                 onClick={showerBlessings}
-                aria-label="Shower flower blessings on Shriya and Anuj"
+                aria-label="Shower flower blessings on Shriya and Anujji"
               >
                 <span className="shower-ring-pulse" />
                 <span className="flower-emoji">🌸</span>
@@ -1858,7 +1858,7 @@ export default function App() {
             <div className="closing-couple-names">
               <span>Shriya</span>
               <i>&</i>
-              <span>Anuj</span>
+              <span>Anujji</span>
             </div>
 
             <div className="closing-actions">
@@ -1973,11 +1973,11 @@ export default function App() {
             <div className="card-modal-img-wrap">
               <img 
                 src="/images/official-card.webp" 
-                alt="Official engagement card for Shriya & Anuj with family lineage" 
+                alt="Official engagement card for Shriya & Anujji with family lineage" 
               />
             </div>
             <p className="card-modal-caption">
-              Official Engagement Announcement · Shriya & Anuj
+              Official Engagement Announcement · Shriya & Anujji
             </p>
           </div>
         </div>
