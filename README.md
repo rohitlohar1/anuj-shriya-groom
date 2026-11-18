@@ -9,7 +9,7 @@ A luxury mobile-first wedding invitation website for **Anuj Kothari & Shriya Sol
 - **Groom**: Anuj Kothari
   - **Grandson of**: Late Smt. Pankubai & Shri Jethmal Kothari
   - **Son of**: Smt. Bindu & Shri Rakesh Kothari
-  - **Maternal Heritage (Nanihal)**: Sha Mahendrakumar Jayantilalji (Sheoganj · Pune)
+  - **Maternal Heritage (Nanihal)**: Sha. Mahendrakumarji Jayantilalji (Sheoganj · Pune)
   - **Residence**: Flat 401 I-block, KLP Abhinandan Apartments, Chennai - Badgaon (Mob. 9840198451)
   - **Native / Hometown**: Badgaon, Chennai
   - **Family**: The Kothari Family
@@ -17,7 +17,7 @@ A luxury mobile-first wedding invitation website for **Anuj Kothari & Shriya Sol
 - **Bride**: Shriya Solanki
   - **Granddaughter of**: Late Smt. & Shri Nenubai Sukhrajji Solanki
   - **Daughter of**: Smt. Sharmila & Shri Kishor Solanki
-  - **Vadhu Paksh / Samdhi Pravar**: Sha. Kishor Sukhrajji Nagotra Solanki (Pune · Novi)
+  - **Vadhu Paksh / Samdhi Pravar**: Sha. Kishorji Sukhrajji Nagotra Solanki (Pune · Novi)
   - **Native / Hometown**: Novi (USA) / Pune
   - **Family**: The Nagotra Solanki Family
 
@@ -27,12 +27,12 @@ A luxury mobile-first wedding invitation website for **Anuj Kothari & Shriya Sol
 
 ### Day 1 — Saturday, 23rd January 2027
 1. **8:00 AM** — **Jaan Swagat & Breakfast** (जान आगमन, भव्य स्वागत एवं अल्पाहार)
-2. **2:00 PM** — **Carnival & High Tea** (आनंदोत्सव कार्निवल एवं हाई टी)
+2. **2:00 PM** — **The Grand Jashn** (आनंदोत्सव द ग्रैंड जश्न एवं हाई टी)
 3. **6:30 PM** — **Sangeet Sandhya** (भव्य संगीत संध्या, नृत्य एवं आनंदोत्सव)
 
 ### Day 2 — Sunday, 24th January 2027
 1. **10:30 AM** — **Anuj ki Baarat** (अनुज की शाही बारात एवं वर निकासी)
-2. **1:15 PM** — **Hastmilap & Lunch (The Auspicious Wedding)** (शुभ हस्तमिलाप, सप्तपदी फेरे एवं प्रीतिभोज)
+2. **1:15 PM** — **Forever vows (Hastmilap & Lunch)** (फॉरएवर वाव्स, शुभ हस्तमिलाप, सप्तपदी फेरे एवं प्रीतिभोज)
 
 ---
 

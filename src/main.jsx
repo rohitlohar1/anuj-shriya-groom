@@ -67,10 +67,10 @@ const events = [
     dayLabel: 'Day 1 — Saturday, 23rd January 2027',
     dateShort: '23 Jan 2027',
     time: '2:00 PM', 
-    title: 'Carnival & High Tea', 
-    sanskrit: 'आनंदोत्सव कार्निवल एवं हाई टी',
-    detail: 'An upbeat, lively afternoon carnival featuring playful games, lively music, photo booths, refreshing cocktails & mocktails, live street food counters, artisanal chai, and delectable sweet treats.', 
-    tag: 'Carnival & Fun',
+    title: 'The Grand Jashn', 
+    sanskrit: 'आनंदोत्सव द ग्रैंड जश्न एवं हाई टी',
+    detail: 'An upbeat, lively afternoon celebrating The Grand Jashn featuring playful games, lively music, photo booths, refreshing cocktails & mocktails, live street food counters, artisanal chai, and delectable sweet treats.', 
+    tag: 'The Grand Jashn',
     icon: '❋' 
   },
   { 
@@ -102,10 +102,10 @@ const events = [
     dayLabel: 'Day 2 — Sunday, 24th January 2027',
     dateShort: '24 Jan 2027',
     time: '1:15 PM', 
-    title: 'Hastmilap & Lunch (The Auspicious Wedding)', 
-    sanskrit: 'शुभ हस्तमिलाप, सप्तपदी फेरे एवं प्रीतिभोज',
-    detail: 'The eternal union of Anuj & Shriya! The sacred Vedic rituals, Hastamelap, Kanyadaan, circumambulation of the holy Agni (Mangalpheras), and eternal Saptapadi vows, followed by a celebratory wedding feast (Preeti Bhoj).', 
-    tag: 'Auspicious Muhurat',
+    title: 'Forever vows (Hastmilap & Lunch)', 
+    sanskrit: 'फॉरएवर वाव्स, शुभ हस्तमिलाप, सप्तपदी फेरे एवं प्रीतिभोज',
+    detail: 'The eternal union of Anuj & Shriya! The sacred Vedic rituals, Hastamelap, Kanyadaan, circumambulation of the holy Agni (Mangalpheras), and eternal Saptapadi Forever vows, followed by a celebratory wedding feast (Preeti Bhoj).', 
+    tag: 'Forever Vows',
     icon: '♡' 
   },
 ];
@@ -482,7 +482,7 @@ function ScratchDate({ onCalendar }) {
             <b className="secret-day">23 & 24 JAN 2027</b>
             <div className="secret-time-badge">
               <Clock size={11} />
-              <span>Hastmilap: Sun, 24 Jan · 1:15 PM</span>
+              <span>Forever vows: Sun, 24 Jan · 1:15 PM</span>
             </div>
             <p className="secret-venue">Purohit Holiday Resort · Lonavala</p>
           </div>
@@ -871,7 +871,7 @@ export default function App() {
       'DTEND:20270124T123000Z',
       'SUMMARY:Anuj & Shriya Royal Wedding Celebration',
       'LOCATION:Purohit Holiday Resort\\, Chhatrapati Shivaji Maharaj Road\\, Near ST Bus Stand\\, Lonavala\\, Maharashtra 410401',
-      'DESCRIPTION:The Kothari family welcomes you to celebrate the wedding of Anuj & Shriya. Day 1 (Jan 23): Jaan Swagat (8 AM), Carnival & High Tea (2 PM), Sangeet (6:30 PM). Day 2 (Jan 24): Anuj ki Baarat (10:30 AM), Hastmilap & Lunch (1:15 PM IST).',
+      'DESCRIPTION:The Kothari family welcomes you to celebrate the wedding of Anuj & Shriya. Day 1 (Jan 23): Jaan Swagat (8 AM), The Grand Jashn (2 PM), Sangeet (6:30 PM). Day 2 (Jan 24): Anuj ki Baarat (10:30 AM), Forever vows & Lunch (1:15 PM IST).',
       'END:VEVENT',
       'END:VCALENDAR'
     ];
@@ -1173,8 +1173,8 @@ export default function App() {
               {/* The Groom's Family: The Kothari Family */}
               <div className="patrika-side-card bride-side honors-side">
                 {/* Floral Top Corners */}
-                <img src="/art/myra_flower_tl.png" alt="" className="myra-flower-corner myra-flower-tl" aria-hidden="true" />
-                <img src="/art/myra_flower_tr.png" alt="" className="myra-flower-corner myra-flower-tr" aria-hidden="true" />
+                <img src="/art/patrika_flower_tl.png" alt="" className="patrika-flower-corner patrika-flower-tl" aria-hidden="true" />
+                <img src="/art/patrika_flower_tr.png" alt="" className="patrika-flower-corner patrika-flower-tr" aria-hidden="true" />
 
                 <div className="patrika-side-header">
                   <span className="side-badge">वर पक्ष · THE KOTHARI FAMILY</span>
@@ -1286,7 +1286,7 @@ export default function App() {
                 {/* Samdhi Pravar / Vadhu Paksh */}
                 <div className="honors-block">
                   <span className="honors-heading">Samdhi Pravar / Vadhu Paksh</span>
-                  <b className="honors-person-name">Sha. Kishor Sukhrajji Nagotra Solanki</b>
+                  <b className="honors-person-name">Sha. Kishorji Sukhrajji Nagotra Solanki</b>
                   <span className="honors-person-loc">Pune, Novi</span>
                 </div>
 
@@ -1295,7 +1295,7 @@ export default function App() {
                 {/* Nanihal Paksh */}
                 <div className="honors-block">
                   <span className="honors-heading">Nanihal Paksh</span>
-                  <b className="honors-person-name">Sha. Mahendrakumar Jayantilalji</b>
+                  <b className="honors-person-name">Sha. Mahendrakumarji Jayantilalji</b>
                   <span className="honors-person-loc">Sheoganj – Pune</span>
                 </div>
 
@@ -1324,8 +1324,8 @@ export default function App() {
 
                 {/* Bottom Flowers (At the end of Family Honors) */}
                 <div className="honors-bottom-floral-wrap">
-                  <img src="/art/myra_flower_bl.png" alt="" className="honors-bottom-flower-left" aria-hidden="true" />
-                  <img src="/art/myra_flower_br.png" alt="" className="honors-bottom-flower-right" aria-hidden="true" />
+                  <img src="/art/patrika_flower_bl.png" alt="" className="honors-bottom-flower-left" aria-hidden="true" />
+                  <img src="/art/patrika_flower_br.png" alt="" className="honors-bottom-flower-right" aria-hidden="true" />
                 </div>
               </div>
             </div>
