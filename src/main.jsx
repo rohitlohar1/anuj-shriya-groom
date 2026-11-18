@@ -21,31 +21,31 @@ const photos = [
     id: 1, 
     caption: 'In your embrace, every step feels like coming home.', 
     tag: 'Joyful Forever', 
-    alt: 'Shriya and Anujji joyful amidst lush hillside meadows' 
+    alt: 'Anujji and Shriya joyful amidst lush hillside meadows' 
   },
   { 
     id: 4, 
     caption: 'The smile that lights up every single tomorrow.', 
     tag: 'Endless Sunshine', 
-    alt: 'Shriya and Anujji sharing an affectionate moment together' 
+    alt: 'Anujji and Shriya sharing an affectionate moment together' 
   },
   { 
     id: 3, 
     caption: 'Held tight in love that words can scarcely hold.', 
     tag: 'Pure Warmth', 
-    alt: 'Shriya embracing Anujji outdoors with happiness' 
+    alt: 'Anujji embracing Shriya outdoors with happiness' 
   },
   { 
     id: 2, 
     caption: 'Two hands, one destined path into infinity.', 
     tag: 'Sacred Touch', 
-    alt: 'Shriya and Anujji reaching towards each other on a scenic road' 
+    alt: 'Anujji and Shriya reaching towards each other on a scenic road' 
   },
   { 
     id: 5, 
     caption: 'Held close and promised for a lifetime.', 
     tag: 'Eternal Promise', 
-    alt: 'Shriya and Anujji with hands interlocked showing the engagement ring' 
+    alt: 'Anujji and Shriya with hands interlocked showing the engagement ring' 
   },
 ];
 
@@ -89,7 +89,7 @@ const events = [
     time: '8:00 AM', 
     title: 'Jaan Swagat & Breakfast', 
     sanskrit: 'जान आगमन, भव्य स्वागत एवं अल्पाहार',
-    detail: 'Welcoming the groom’s family and cherished guests with traditional Aarti, fragrant flower showers, celebratory dhol beats, and a lavish royal breakfast spread to kick off the wedding festivities.', 
+    detail: 'Grand arrival of the groom’s family and cherished guests, welcomed with traditional Aarti, fragrant flower showers, celebratory dhol beats, and a lavish royal breakfast spread to kick off the wedding festivities.', 
     tag: 'Grand Welcome',
     icon: '✺' 
   },
@@ -98,9 +98,9 @@ const events = [
     dayLabel: 'Day 1 — Saturday, 23rd January 2027',
     dateShort: '23 Jan 2027',
     time: '10:00 AM', 
-    title: 'Mayra of Sharmila Solanki & Lunch', 
-    sanskrit: 'शर्मिला सोलंकी का पावन मायरा (मामेरा) एवं प्रीतिभोज',
-    detail: 'The deeply cherished traditional Mayra (Mamera) ceremony honoring the bride’s mother, Smt. Sharmila Solanki, welcoming maternal uncles and family with joyous folk songs, sacred gifts, and heartfelt blessings, followed by an exquisite royal lunch feast.', 
+    title: 'Mayra Ceremony & Lunch', 
+    sanskrit: 'पावन मायरा (मामेरा) एवं प्रीतिभोज',
+    detail: 'The deeply cherished traditional Mayra ceremony welcoming maternal family and guests with joyous folk songs, sacred gifts, and heartfelt blessings, followed by an exquisite royal lunch feast.', 
     tag: 'Sacred Tradition',
     icon: '✧',
     myraDetails: MYRA_PATRIKA_DATA
@@ -136,7 +136,7 @@ const events = [
     time: '10:30 AM', 
     title: 'Anujji ki Baarat', 
     sanskrit: 'अनुज की शाही बारात एवं वर निकासी',
-    detail: 'The groom’s grand royal procession! Join Anujji with vibrant safas, dancing to energetic dhol beats and brass brass band music as we joyfully make our way to the wedding venue mandap.', 
+    detail: 'The groom’s grand royal procession! Join Anujji with vibrant safas, dancing to energetic dhol beats and brass band music as we joyfully make our way to the wedding venue mandap.', 
     tag: 'Royal Baraat',
     icon: '❖' 
   },
@@ -147,7 +147,7 @@ const events = [
     time: '1:15 PM', 
     title: 'Hastmilap & Lunch (The Auspicious Wedding)', 
     sanskrit: 'शुभ हस्तमिलाप, सप्तपदी फेरे एवं प्रीतिभोज',
-    detail: 'The eternal union of Shriya & Anujji! The sacred Vedic rituals, Hastamelap, Kanyadaan, circumambulation of the holy Agni (Mangalpheras), and eternal Saptapadi vows, followed by a celebratory wedding feast (Preeti Bhoj).', 
+    detail: 'The eternal union of Anujji & Shriya! The sacred Vedic rituals, Hastamelap, Kanyadaan, circumambulation of the holy Agni (Mangalpheras), and eternal Saptapadi vows, followed by a celebratory wedding feast (Preeti Bhoj).', 
     tag: 'Auspicious Muhurat',
     icon: '♡' 
   },
@@ -615,7 +615,7 @@ function SubscriptionStoryCard({ audioSystem, onShowerBlessings, showToast }) {
       showToast?.('🎉 Official Subscription Stamped: Lifetime Plan Activated!');
     } else {
       audioSystem?.playChimeSound(523.25, 0.1);
-      showToast?.('❤️ Subscribed for 7 Lifetimes · Shriya & Anujji');
+      showToast?.('❤️ Subscribed for 7 Lifetimes · Anujji & Shriya');
     }
   };
 
@@ -642,7 +642,7 @@ function SubscriptionStoryCard({ audioSystem, onShowerBlessings, showToast }) {
         </blockquote>
         <div className="trial-quote-signoff">
           <span>With eternal love & laughter,</span>
-          <b>Shriya & Anujji</b>
+          <b>Anujji & Shriya</b>
         </div>
       </div>
 
@@ -653,10 +653,10 @@ function SubscriptionStoryCard({ audioSystem, onShowerBlessings, showToast }) {
         {/* Pass Header */}
         <div className="pass-header">
           <div className="pass-brand">
-            <span className="pass-monogram">S ❦ A</span>
+            <span className="pass-monogram">A ❦ S</span>
             <div className="pass-title-wrap">
               <span className="pass-title">OFFICIAL MEMBERSHIP PASS</span>
-              <span className="pass-id">ID: #SA-2020-2027-VIVAH</span>
+              <span className="pass-id">ID: #AS-2020-2027-VIVAH</span>
             </div>
           </div>
           <div className="pass-chip-wrap" title="Royal Golden Chip" aria-hidden="true">
@@ -671,7 +671,7 @@ function SubscriptionStoryCard({ audioSystem, onShowerBlessings, showToast }) {
         <div className="pass-member-info">
           <div className="pass-member-names-wrap">
             <span className="pass-label">PRIMARY ACCOUNT HOLDERS</span>
-            <h3 className="pass-member-names">Shriya Jain & Anujji Kothari</h3>
+            <h3 className="pass-member-names">Anujji Kothari & Shriya Solanki</h3>
           </div>
           <div className={`pass-tier-pill ${stamped ? 'pill-stamped' : ''}`}>
             <BadgeCheck size={13} />
@@ -907,15 +907,15 @@ export default function App() {
     const lines = [
       'BEGIN:VCALENDAR',
       'VERSION:2.0',
-      'PRODID:-//Nagotra Solanki Family//Wedding Invitation//EN',
+      'PRODID:-//Kothari Family//Wedding Invitation//EN',
       'BEGIN:VEVENT',
-      'UID:shriya-anuj-20270123@nagotra-solanki.wedding',
+      'UID:anujji-shriya-20270123@kothari.wedding',
       'DTSTAMP:20261103T000000Z',
       'DTSTART:20270123T023000Z',
       'DTEND:20270124T123000Z',
-      'SUMMARY:Shriya & Anujji Royal Wedding Celebration',
+      'SUMMARY:Anujji & Shriya Royal Wedding Celebration',
       'LOCATION:Purohit Holiday Resort\\, Chhatrapati Shivaji Maharaj Road\\, Near ST Bus Stand\\, Lonavala\\, Maharashtra 410401',
-      'DESCRIPTION:Nagotra Solanki family welcomes you to celebrate the wedding of Shriya & Anujji. Day 1 (Jan 23): Jaan Swagat (8 AM), Mayra of Sharmila Solanki (10 AM), Carnival & High Tea (2 PM), Sangeet (6:30 PM). Day 2 (Jan 24): Anujji ki Baarat (10:30 AM), Hastmilap & Lunch (1:15 PM IST).',
+      'DESCRIPTION:The Kothari family welcomes you to celebrate the wedding of Anujji & Shriya. Day 1 (Jan 23): Jaan Swagat (8 AM), Mayra Ceremony (10 AM), Carnival & High Tea (2 PM), Sangeet (6:30 PM). Day 2 (Jan 24): Anujji ki Baarat (10:30 AM), Hastmilap & Lunch (1:15 PM IST).',
       'END:VEVENT',
       'END:VCALENDAR'
     ];
@@ -923,7 +923,7 @@ export default function App() {
     const url = URL.createObjectURL(new Blob([content], { type: 'text/calendar;charset=utf-8' }));
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'Shriya-Anujji-Wedding.ics';
+    a.download = 'Anujji-Shriya-Wedding.ics';
     a.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
     showToast('Wedding celebration saved to calendar file!');
@@ -932,8 +932,8 @@ export default function App() {
   const share = async () => {
     try {
       const data = {
-        title: 'Shriya & Anujji — Royal Wedding Celebration',
-        text: 'With immense joy and the blessings of our elders, Nagotra Solanki family welcomes you to celebrate the wedding of Shriya & Anujji on 23rd & 24th January 2027 at Purohit Holiday Resort, Lonavala.',
+        title: 'Anujji & Shriya — Royal Wedding Celebration',
+        text: 'With immense joy and the blessings of our elders, the Kothari family welcomes you to celebrate the wedding of Anujji & Shriya on 23rd & 24th January 2027 at Purohit Holiday Resort, Lonavala.',
         url: window.location.href
       };
       if (navigator.share) {
@@ -979,7 +979,7 @@ export default function App() {
       setFallingPetals(prev => prev.filter(p => !newPetals.includes(p)));
     }, 4500);
 
-    showToast('🌸 Heartfelt blessings showered upon Shriya & Anujji!');
+    showToast('🌸 Heartfelt blessings showered upon Anujji & Shriya!');
   }, [audioSystem, showToast]);
 
   const handleDoubleTapPhoto = () => {
@@ -1032,9 +1032,9 @@ export default function App() {
             className="topbar-monogram"
             onClick={phase === 'sealed' ? e => e.preventDefault() : undefined}
           >
-            <span>S</span>
-            <span className="mono-amp">❦</span>
             <span>A</span>
+            <span className="mono-amp">❦</span>
+            <span>S</span>
           </a>
 
           <div className="topbar-actions">
@@ -1059,7 +1059,7 @@ export default function App() {
 
         {/* Opening Velvet Doors Scene */}
         {phase !== 'entered' && (
-          <div className={`opening-scene ${phase}`} aria-label="Open Shriya and Anujji’s wedding invitation">
+          <div className={`opening-scene ${phase}`} aria-label="Open Anujji and Shriya’s wedding invitation">
             <div className="intro-curtains" aria-hidden="true">
               <div className="curtain-panel curtain-left" />
               <div className="curtain-panel curtain-right" />
@@ -1075,18 +1075,18 @@ export default function App() {
                   <div className="gate-welcome">
                     <div className="gate-header">
                       <span className="gate-om">॥ श्री गणेशाय नमः ॥</span>
-                      <span className="gate-family">NAGOTRA SOLANKI FAMILY WELCOMES YOU</span>
+                      <span className="gate-family">THE KOTHARI FAMILY WELCOMES YOU</span>
                     </div>
 
                     <button
                       className="invitation-seal"
                       onClick={() => enter(true)}
-                      aria-label="Open Shriya and Anujji’s wedding invitation with music"
+                      aria-label="Open Anujji and Shriya’s wedding invitation with music"
                     >
                       <span className="seal-outer-rim" />
                       <span className="seal-flower">❦</span>
                       <small className="seal-kicker">You are cordially invited</small>
-                      <b className="seal-names">S <i>&</i> A</b>
+                      <b className="seal-names">A <i>&</i> S</b>
                       <span className="seal-date-pill">SHUBH VIVAH</span>
                       <span className="seal-tap">
                         <Sparkles size={11} /> TAP TO UNVEIL <Sparkles size={11} />
@@ -1139,19 +1139,19 @@ export default function App() {
               <div className="invitation-herald">
                 <span className="herald-sub">TOGETHER WITH THEIR FAMILIES</span>
                 <h1>
-                  <span className="name-bride">Shriya</span>
-                  <i className="ampersand">&</i>
                   <span className="name-groom">Anujji</span>
+                  <i className="ampersand">&</i>
+                  <span className="name-bride">Shriya</span>
                 </h1>
                 <p className="herald-tag">Joyfully invite you to celebrate their wedding</p>
               </div>
 
               <div className="family-introduction">
-                <span className="family-crown">NAGOTRA SOLANKI FAMILY WELCOMES YOU</span>
+                <span className="family-crown">THE KOTHARI FAMILY WELCOMES YOU</span>
                 <p>
                   to share our happiness and bless the new beginning together with the
                 </p>
-                <span className="family-crown secondary">KOTHARI FAMILY</span>
+                <span className="family-crown secondary">NAGOTRA SOLANKI FAMILY</span>
               </div>
 
               <div className="hero-date-badge">
@@ -1188,7 +1188,7 @@ export default function App() {
             <h2 className="section-title">A Garden of Forever</h2>
             
             <p className="note-text lead">
-              With the graceful blessings of our revered elders, grandparents, and the Almighty, Nagotra Solanki family welcomes you to celebrate the wedding of Shriya & Anujji in scenic Lonavala.
+              With the graceful blessings of our revered elders, grandparents, and the Almighty, the Kothari family welcomes you to celebrate the wedding of Anujji & Shriya in scenic Lonavala.
             </p>
             
             <p className="note-text">
@@ -1197,7 +1197,7 @@ export default function App() {
 
             <div className="script-signature">
               <span>With eternal love & respect,</span>
-              <b>Shriya & Anujji</b>
+              <b>Anujji & Shriya</b>
               <Heart size={14} className="heart-pulse" />
             </div>
             <WeddingDivider symbol="✿" />
@@ -1210,51 +1210,61 @@ export default function App() {
               <Sparkles size={18} className="crest-icon" />
             </div>
             <span className="card-kicker">SACRED HERITAGE & ELDERS’ BLESSINGS</span>
-            <h2 className="section-title">The Bride’s Family</h2>
+            <h2 className="section-title">The Groom’s Family</h2>
             <p className="section-lead">Rooted in tradition, values, and boundless ancestral blessings.</p>
 
             <div className="patrika-grid single-family">
-              {/* The Bride's Family: Nagotra Solanki Family */}
+              {/* The Groom's Family: The Kothari Family */}
               <div className="patrika-side-card bride-side honors-side">
                 {/* Floral Top Corners */}
                 <img src="/art/myra_flower_tl.png" alt="" className="myra-flower-corner myra-flower-tl" aria-hidden="true" />
                 <img src="/art/myra_flower_tr.png" alt="" className="myra-flower-corner myra-flower-tr" aria-hidden="true" />
 
                 <div className="patrika-side-header">
-                  <span className="side-badge">वधू पक्ष · NAGOTRA SOLANKI FAMILY</span>
-                  <h3 className="side-member-name">Shriya Jain</h3>
+                  <span className="side-badge">वर पक्ष · THE KOTHARI FAMILY</span>
+                  <h3 className="side-member-name">Anujji Kothari</h3>
                 </div>
 
                 <div className="lineage-item">
-                  <span className="lineage-rel">Granddaughter of</span>
-                  <b className="lineage-name">Late Smt. & Shri Nenubai Sukhrajji Solanki</b>
+                  <span className="lineage-rel">Divine Blessings · Grandmother</span>
+                  <b className="lineage-name">Late Smt. Pankubai Jethmal Kothari</b>
                 </div>
 
                 <div className="lineage-divider-mini" />
 
                 <div className="lineage-item">
-                  <span className="lineage-rel">Daughter of</span>
-                  <b className="lineage-name">Smt. Sharmila & Shri Kishor Solanki</b>
+                  <span className="lineage-rel">Beloved Son of</span>
+                  <b className="lineage-name">Smt. Bindu & Shri Rakesh Kothari</b>
                 </div>
 
                 <div className="lineage-place">
                   <MapPin size={12} />
-                  <span>Novi, Pune</span>
+                  <span>Flat 401 I-block, KLP Abhinandan Apartments, Chennai · Badgaon</span>
                 </div>
 
                 <div className="honors-divider-line" style={{ width: '180px', margin: '22px auto 16px' }} />
 
-                {/* Nagotra Solanki Family Honors */}
+                {/* Kothari Family Honors */}
                 <span className="honors-heading" style={{ fontSize: '11.5px', letterSpacing: '0.22em', marginBottom: '14px', color: '#92532a' }}>
-                  ✦ NAGOTRA SOLANKI FAMILY HONORS ✦
+                  ✦ KOTHARI FAMILY HONORS ✦
                 </span>
+
+                {/* Divine Blessing */}
+                <div className="honors-block">
+                  <span className="honors-heading">Divine Blessing</span>
+                  <b className="honors-person-name" style={{ fontSize: '15px' }}>Late Smt. Pankubai Jethmal Kothari</b>
+                </div>
+
+                <div className="honors-divider-line" />
 
                 {/* Inviting with regards */}
                 <div className="honors-block">
                   <span className="honors-heading">Inviting with Regards</span>
                   <p className="honors-names-text">
-                    Hirachand, Champalal, Arvind, Suresh, Ashok, Dhiraj, Kishor,<br />
-                    Kalpesh, Shailesh, Dr. Rahul, Rushant, Anish, Jainil
+                    Jethmal, Ramesh, Tejraj, Ashok, Popat, Suresh,<br />
+                    Goutam, Manohar, Ranjeet, Nirmal, Uttam, Santosh,<br />
+                    Sailesh, Uttam, Nitesh, Sandesh, Atishay<br />
+                    and Kothari family
                   </p>
                 </div>
 
@@ -1265,16 +1275,28 @@ export default function App() {
                   <span className="honors-heading">Inviting with Pleasure</span>
                   <div className="honors-boxes-grid">
                     <div className="honors-box-item">
-                      <span className="honors-box-text">Anjana <span className="honors-box-amp">&</span> Champalalji</span>
+                      <span className="honors-box-text">Shobha <span className="honors-box-amp">&</span> Jethmal Kothari</span>
                     </div>
                     <div className="honors-box-item">
-                      <span className="honors-box-text">Sharmila <span className="honors-box-amp">&</span> Kishorji</span>
+                      <span className="honors-box-text">Rita <span className="honors-box-amp">&</span> Amrit Kothari</span>
                     </div>
                     <div className="honors-box-item">
-                      <span className="honors-box-text">Anjana <span className="honors-box-amp">&</span> Ashokji</span>
+                      <span className="honors-box-text">Rekha <span className="honors-box-amp">&</span> Rajesh Kothari</span>
                     </div>
                     <div className="honors-box-item">
-                      <span className="honors-box-text">Sangeeta <span className="honors-box-amp">&</span> Kalpeshji</span>
+                      <span className="honors-box-text">Bindu <span className="honors-box-amp">&</span> Rakesh Kothari</span>
+                    </div>
+                    <div className="honors-box-item">
+                      <span className="honors-box-text">Nikita <span className="honors-box-amp">&</span> Abhishek Kothari</span>
+                    </div>
+                    <div className="honors-box-item">
+                      <span className="honors-box-text">Ruchika <span className="honors-box-amp">&</span> Akshay Kothari</span>
+                    </div>
+                    <div className="honors-box-item">
+                      <span className="honors-box-text">Diya <span className="honors-box-amp">&</span> Ritvik Kothari</span>
+                    </div>
+                    <div className="honors-box-item full-width">
+                      <span className="honors-box-text">Avani, Anaira, Adhira Kothari</span>
                     </div>
                   </div>
                 </div>
@@ -1286,42 +1308,30 @@ export default function App() {
                   <span className="honors-heading">Special Request</span>
                   <div className="honors-boxes-grid">
                     <div className="honors-box-item">
-                      <span className="honors-box-text">Fancybai <span className="honors-box-amp">&</span> Tarachandji</span>
+                      <span className="honors-box-text">Sangeeta <span className="honors-box-amp">&</span> Dineshji Srisrimal</span>
                     </div>
                     <div className="honors-box-item">
-                      <span className="honors-box-text">Seema <span className="honors-box-amp">&</span> Vikramji</span>
+                      <span className="honors-box-text">Sonal <span className="honors-box-amp">&</span> Bharatji Srisrimal</span>
                     </div>
                     <div className="honors-box-item">
-                      <span className="honors-box-text">Ushabai <span className="honors-box-amp">&</span> Rameshji</span>
+                      <span className="honors-box-text">Sneha <span className="honors-box-amp">&</span> Ankitji Mehta</span>
                     </div>
                     <div className="honors-box-item">
-                      <span className="honors-box-text">Shweta <span className="honors-box-amp">&</span> Chetanji</span>
-                    </div>
-                    <div className="honors-box-item">
-                      <span className="honors-box-text">Vidya <span className="honors-box-amp">&</span> Rakeshji</span>
-                    </div>
-                    <div className="honors-box-item">
-                      <span className="honors-box-text">Komal <span className="honors-box-amp">&</span> Mohitji</span>
-                    </div>
-                    <div className="honors-box-item">
-                      <span className="honors-box-text">Varsha <span className="honors-box-amp">&</span> Rajendraji</span>
-                    </div>
-                    <div className="honors-box-item">
-                      <span className="honors-box-text">Kejal <span className="honors-box-amp">&</span> Priyankji</span>
+                      <span className="honors-box-text">Ritu <span className="honors-box-amp">&</span> Pratikji Srisrimal</span>
                     </div>
                     <div className="honors-box-item full-width">
-                      <span className="honors-box-text">Garima, Khushi</span>
+                      <span className="honors-box-text">Ritika, Rinisha, Krisha, Adit, Ayana, Sachit, Agastya</span>
                     </div>
                   </div>
                 </div>
 
                 <div className="honors-divider-line" />
 
-                {/* Samdhi Parivar */}
+                {/* Samdhi Pravar / Vadhu Paksh */}
                 <div className="honors-block">
-                  <span className="honors-heading">Samdhi Parivar</span>
-                  <b className="honors-person-name">Sha. Rakeshji Jethmalji Kothari</b>
-                  <span className="honors-person-loc">Chennai, (Badgaon)</span>
+                  <span className="honors-heading">Samdhi Pravar / Vadhu Paksh</span>
+                  <b className="honors-person-name">Sha. Kishor Sukhrajji Nagotra Solanki</b>
+                  <span className="honors-person-loc">Pune, Novi</span>
                 </div>
 
                 <div className="honors-divider-line" />
@@ -1329,8 +1339,8 @@ export default function App() {
                 {/* Nanihal Paksh */}
                 <div className="honors-block">
                   <span className="honors-heading">Nanihal Paksh</span>
-                  <b className="honors-person-name">Sha. Premchandji Gulabchandji Shrishrimal</b>
-                  <span className="honors-person-loc">Karjat, (Naya Jogapura)</span>
+                  <b className="honors-person-name">Sha. Mahendrakumar Jayantilalji</b>
+                  <span className="honors-person-loc">Sheoganj – Pune</span>
                 </div>
 
                 <div className="honors-divider-line" />
@@ -1339,8 +1349,20 @@ export default function App() {
                 <div className="honors-block">
                   <span className="honors-heading">Best Wishes</span>
                   <p className="honors-wishes-text">
-                    Veeram Distributor, Pune<br />
-                    Gautam Collection, Pune
+                    M/s Rameshkumar & Co., Chennai<br />
+                    M/s Kothari & Sons, Chennai
+                  </p>
+                </div>
+
+                <div className="honors-divider-line" />
+
+                {/* Residence */}
+                <div className="honors-block">
+                  <span className="honors-heading">Residence</span>
+                  <b className="honors-person-name">Sha. Rakesh Jethmalji Kothari</b>
+                  <p className="honors-person-loc" style={{ marginTop: '4px' }}>
+                    Flat 401 I-Block, KLP Abhinandan Apartments, Chennai – Badgaon<br />
+                    <span style={{ display: 'inline-block', marginTop: '4px' }}>Mob. +91 98401 98451</span>
                   </p>
                 </div>
 
@@ -1355,15 +1377,15 @@ export default function App() {
             <div className="patrika-card-preview-action">
               <button 
                 className="view-original-card-btn myra-callout-btn"
-                onClick={() => setMyraModalOpen(true)}
+                onClick={() => setCardModalOpen(true)}
               >
-                <Sparkles size={15} /> View Mayra (Mamera) Patrika & Guest Honors
+                <Eye size={15} /> View Official Groom Wedding Card (Patrika)
               </button>
               <button 
                 className="view-original-card-btn"
-                onClick={() => setCardModalOpen(true)}
+                onClick={() => setMyraModalOpen(true)}
               >
-                <Eye size={15} /> View Official “We Said Yes” Announcement Card
+                <Sparkles size={15} /> View Mayra Ceremony Patrika & Guest Honors
               </button>
             </div>
           </section>
@@ -1811,14 +1833,14 @@ export default function App() {
             <span className="card-kicker">PHOOL VRUSHTI · SHOWER BLESSINGS</span>
             <h2 className="section-title">Shower Your Blessings</h2>
             <p className="section-lead">
-              Tap below to shower auspicious rose and marigold petals upon Shriya & Anujji!
+              Tap below to shower auspicious rose and marigold petals upon Anujji & Shriya!
             </p>
 
             <div className="blessing-interactive-core">
               <button
                 className="shower-flower-btn"
                 onClick={showerBlessings}
-                aria-label="Shower flower blessings on Shriya and Anujji"
+                aria-label="Shower flower blessings on Anujji and Shriya"
               >
                 <span className="shower-ring-pulse" />
                 <span className="flower-emoji">🌸</span>
@@ -1847,18 +1869,18 @@ export default function App() {
 
             <WeddingDivider symbol="❦" />
             <span className="card-kicker">WITH PROFOUND GRATITUDE & REVERENCE</span>
-            <h2 className="closing-family-title">The Nagotra Solanki Family</h2>
+            <h2 className="closing-family-title">The Kothari Family</h2>
             <span className="family-and">&</span>
-            <h2 className="closing-family-title secondary">The Kothari Family</h2>
+            <h2 className="closing-family-title secondary">The Nagotra Solanki Family</h2>
 
             <p className="closing-tagline">
-              Nagotra Solanki family welcomes you to celebrate with us. Your gracious presence and cherished blessings will make our celebration complete. We eagerly await your arrival in Lonavala!
+              The Kothari family welcomes you to celebrate with us. Your gracious presence and cherished blessings will make our celebration complete. We eagerly await your arrival in Lonavala!
             </p>
 
             <div className="closing-couple-names">
-              <span>Shriya</span>
-              <i>&</i>
               <span>Anujji</span>
+              <i>&</i>
+              <span>Shriya</span>
             </div>
 
             <div className="closing-actions">
@@ -1973,11 +1995,11 @@ export default function App() {
             <div className="card-modal-img-wrap">
               <img 
                 src="/images/official-card.webp" 
-                alt="Official engagement card for Shriya & Anujji with family lineage" 
+                alt="Official groom wedding card for Anujji & Shriya with Kothari family honors" 
               />
             </div>
             <p className="card-modal-caption">
-              Official Engagement Announcement · Shriya & Anujji
+              Official Groom Wedding Card & Patrika · Anujji & Shriya
             </p>
           </div>
         </div>
