@@ -1,12 +1,12 @@
-# Anujji & Shriya — Royal Wedding Celebration
+# Anuj & Shriya — Royal Wedding Celebration
 
-A luxury mobile-first wedding invitation website for **Anujji Kothari & Shriya Solanki**, where the **Kothari family welcomes you** to celebrate the auspicious union together with the **Nagotra Solanki family** on **23rd & 24th January 2027** at **Purohit Holiday Resort, Lonavala, Maharashtra**.
+A luxury mobile-first wedding invitation website for **Anuj Kothari & Shriya Solanki**, where the **Kothari family welcomes you** to celebrate the auspicious union together with the **Nagotra Solanki family** on **23rd & 24th January 2027** at **Purohit Holiday Resort, Lonavala, Maharashtra**.
 
 ---
 
 ## 💍 Couple & Family Details
 
-- **Groom**: Anujji Kothari
+- **Groom**: Anuj Kothari
   - **Grandson of**: Late Smt. Pankubai & Shri Jethmal Kothari
   - **Son of**: Smt. Bindu & Shri Rakesh Kothari
   - **Maternal Heritage (Nanihal)**: Sha Mahendrakumar Jayantilalji (Sheoganj · Pune)
@@ -27,12 +27,12 @@ A luxury mobile-first wedding invitation website for **Anujji Kothari & Shriya S
 
 ### Day 1 — Saturday, 23rd January 2027
 1. **8:00 AM** — **Jaan Swagat & Breakfast** (जान आगमन, भव्य स्वागत एवं अल्पाहार)
-2. **10:00 AM** — **Mayra of Sharmila Solanki & Lunch** (शर्मिला सोलंकी का पावन मायरा एवं प्रीतिभोज)
+2. **10:00 AM** — **Mayra Ceremony & Lunch** (पावन मायरा एवं प्रीतिभोज)
 3. **2:00 PM** — **Carnival & High Tea** (आनंदोत्सव कार्निवल एवं हाई टी)
 4. **6:30 PM** — **Sangeet Sandhya** (भव्य संगीत संध्या, नृत्य एवं आनंदोत्सव)
 
 ### Day 2 — Sunday, 24th January 2027
-1. **10:30 AM** — **Anujji ki Baarat** (अनुज की शाही बारात एवं वर निकासी)
+1. **10:30 AM** — **Anuj ki Baarat** (अनुज की शाही बारात एवं वर निकासी)
 2. **1:15 PM** — **Hastmilap & Lunch (The Auspicious Wedding)** (शुभ हस्तमिलाप, सप्तपदी फेरे एवं प्रीतिभोज)
 
 ---
