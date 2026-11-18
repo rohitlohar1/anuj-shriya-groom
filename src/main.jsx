@@ -1330,14 +1330,6 @@ export default function App() {
               </div>
             </div>
 
-            <div className="patrika-card-preview-action">
-              <button 
-                className="view-original-card-btn"
-                onClick={() => setCardModalOpen(true)}
-              >
-                <Eye size={15} /> View Official Groom Wedding Card (Patrika)
-              </button>
-            </div>
           </section>
 
           {/* Section 4: Interactive Scratch Date */}
@@ -1592,10 +1584,6 @@ export default function App() {
               })}
             </div>
 
-            <div className="programme-footer-badge">
-              <Compass size={13} />
-              <span>All auspicious rituals will be conducted in Indian Standard Time (IST)</span>
-            </div>
           </section>
 
           {/* Section 8: The Grand Venue & Location Hub */}
