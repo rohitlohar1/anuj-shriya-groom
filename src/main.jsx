@@ -78,7 +78,7 @@ const events = [
     dayLabel: 'Day 1 — Saturday, 23rd January 2027',
     dateShort: '23 Jan 2027',
     time: '6:30 PM', 
-    title: 'Sangeet Sandhya', 
+    title: 'The Wedding Jam', 
     sanskrit: 'भव्य संगीत संध्या, नृत्य एवं आनंदोत्सव',
     detail: 'An electrifying gala evening under the Lonavala stars! Spectacular choreographed performances by family and friends, the couple’s romantic dance, high-energy live DJ beats, and a celebratory royal banquet dinner.', 
     tag: 'Musical Night',

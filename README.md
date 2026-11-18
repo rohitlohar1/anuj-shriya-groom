@@ -28,7 +28,7 @@ A luxury mobile-first wedding invitation website for **Anuj Kothari & Shriya Sol
 ### Day 1 — Saturday, 23rd January 2027
 1. **8:00 AM** — **Jaan Swagat & Breakfast** (जान आगमन, भव्य स्वागत एवं अल्पाहार)
 2. **2:00 PM** — **The Grand Jashn** (आनंदोत्सव द ग्रैंड जश्न एवं हाई टी)
-3. **6:30 PM** — **Sangeet Sandhya** (भव्य संगीत संध्या, नृत्य एवं आनंदोत्सव)
+3. **6:30 PM** — **The Wedding Jam** (भव्य संगीत संध्या, नृत्य एवं आनंदोत्सव)
 
 ### Day 2 — Sunday, 24th January 2027
 1. **10:30 AM** — **Anuj ki Baarat** (अनुज की शाही बारात एवं वर निकासी)
