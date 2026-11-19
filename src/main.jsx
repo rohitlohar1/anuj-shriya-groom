@@ -1193,11 +1193,6 @@ export default function App() {
                   <b className="lineage-name">Smt. Bindu & Shri Rakesh Kothari</b>
                 </div>
 
-                <div className="lineage-place">
-                  <MapPin size={12} />
-                  <span>Flat 401 I-block, KLP Abhinandan Apartments, Chennai · Badgaon</span>
-                </div>
-
                 <div className="honors-divider-line" style={{ width: '180px', margin: '22px auto 16px' }} />
 
                 {/* Kothari Family Honors */}
@@ -1318,7 +1313,7 @@ export default function App() {
                   <b className="honors-person-name">Sha. Rakesh Jethmalji Kothari</b>
                   <p className="honors-person-loc" style={{ marginTop: '4px' }}>
                     Flat 401 I-Block, KLP Abhinandan Apartments, Chennai – Badgaon<br />
-                    <span style={{ display: 'inline-block', marginTop: '4px' }}>Mob. +91 98401 98451</span>
+                    <span style={{ display: 'inline-block', marginTop: '4px' }}>Mob. +91 98401 23560</span>
                   </p>
                 </div>
 
