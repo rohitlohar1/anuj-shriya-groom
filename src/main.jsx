@@ -1269,6 +1269,116 @@ export default function App() {
             <WeddingDivider symbol="✿" />
           </section>
 
+          {/* Section 7: 2-Day Program Itinerary */}
+          <section className="programme-section wedding-card" id="celebrations">
+            <CornerOrnaments />
+            <div className="section-crest">
+              <CalendarDays size={20} className="crest-icon" />
+            </div>
+            <span className="card-kicker">TWO DAYS OF FESTIVITIES</span>
+            <h2 className="section-title">Ceremonies & Celebrations</h2>
+            <p className="section-lead">A sacred journey illuminated by ancient traditions, music, dance, and joyous feasts.</p>
+
+            {/* Day Selector Chips */}
+            <div className="schedule-tabs" role="tablist" aria-label="Select celebration day">
+              <button
+                className={`schedule-tab-btn ${activeDayFilter === 'all' ? 'active' : ''}`}
+                onClick={() => {
+                  setActiveDayFilter('all');
+                  audioSystem.playChimeSound(587.33, 0.08);
+                }}
+                role="tab"
+                aria-selected={activeDayFilter === 'all'}
+              >
+                All Events (6)
+              </button>
+              <button
+                className={`schedule-tab-btn ${activeDayFilter === 1 ? 'active' : ''}`}
+                onClick={() => {
+                  setActiveDayFilter(1);
+                  audioSystem.playChimeSound(659.25, 0.08);
+                }}
+                role="tab"
+                aria-selected={activeDayFilter === 1}
+              >
+                Day 1 · 23 Jan (Sat)
+              </button>
+              <button
+                className={`schedule-tab-btn ${activeDayFilter === 2 ? 'active' : ''}`}
+                onClick={() => {
+                  setActiveDayFilter(2);
+                  audioSystem.playChimeSound(783.99, 0.08);
+                }}
+                role="tab"
+                aria-selected={activeDayFilter === 2}
+              >
+                Day 2 · 24 Jan (Sun)
+              </button>
+            </div>
+
+            <div className="wedding-timeline">
+              {filteredEvents.map((event, i) => {
+                const globalIndex = events.indexOf(event);
+                const isExpanded = expanded === globalIndex;
+                const isNewDay = i === 0 || event.day !== filteredEvents[i - 1].day;
+
+                return (
+                  <React.Fragment key={event.title}>
+                    {activeDayFilter === 'all' && isNewDay && (
+                      <div className="day-separator-ribbon">
+                        <span className="ribbon-line" />
+                        <span className="ribbon-text">{event.dayLabel}</span>
+                        <span className="ribbon-line" />
+                      </div>
+                    )}
+
+                    <article
+                      className={`timeline-card ${isExpanded ? 'expanded' : ''}`}
+                    >
+                      <button
+                        className="timeline-header-btn"
+                        onClick={() => {
+                          setExpanded(isExpanded ? -1 : globalIndex);
+                          audioSystem.playChimeSound(587.33, 0.08);
+                        }}
+                        aria-expanded={isExpanded}
+                        aria-controls={`event-detail-${globalIndex}`}
+                      >
+                        <div className="timeline-marker">
+                          <span className="marker-icon">{event.icon}</span>
+                          <span className="marker-ring" />
+                        </div>
+
+                        <div className="timeline-title-group">
+                          <div className="timeline-meta-row">
+                            <span className="event-time-badge">{event.time}</span>
+                            <span className="event-day-mini">{event.dateShort}</span>
+                            <span className="event-tag-pill">{event.tag}</span>
+                          </div>
+                          <h3 className="event-name">{event.title}</h3>
+                          <span className="event-sanskrit">{event.sanskrit}</span>
+                        </div>
+
+                        <div className="timeline-toggle-icon">
+                          {isExpanded ? <Minus size={15} /> : <Plus size={15} />}
+                        </div>
+                      </button>
+
+                      <div
+                        id={`event-detail-${globalIndex}`}
+                        className={`timeline-body ${isExpanded ? 'open' : ''}`}
+                        hidden={!isExpanded}
+                      >
+                        <p className="event-detail-text">{event.detail}</p>
+                      </div>
+                    </article>
+                  </React.Fragment>
+                );
+              })}
+            </div>
+
+          </section>
+
           {/* Section 3: Family Heritage & Lineage (Sacred Patrika) */}
           <section className="patrika-section wedding-card" id="patrika">
             <CornerOrnaments />
@@ -1387,9 +1497,9 @@ export default function App() {
 
                 <div className="honors-divider-line" />
 
-                {/* Samdhi Pravar / Vadhu Paksh */}
+                {/* Samdhi Pravar */}
                 <div className="honors-block">
-                  <span className="honors-heading">Samdhi Pravar / Vadhu Paksh</span>
+                  <span className="honors-heading">Samdhi Pravar</span>
                   <b className="honors-person-name">Sha. Kishorji Sukhrajji Nagotra Solanki</b>
                   <span className="honors-person-loc">Pune, Novi</span>
                 </div>
@@ -1400,7 +1510,7 @@ export default function App() {
                 <div className="honors-block">
                   <span className="honors-heading">Nanihal Paksh</span>
                   <b className="honors-person-name">Sha. Mahendrakumarji Jayantilalji</b>
-                  <span className="honors-person-loc">Sheoganj – Pune</span>
+                  <span className="honors-person-loc">Pune – Sheoganj</span>
                 </div>
 
                 <div className="honors-divider-line" />
@@ -1580,116 +1690,6 @@ export default function App() {
             <span className="photo-hint">Double tap photo to send love ❤️</span>
           </section>
 
-          {/* Section 7: 2-Day Program Itinerary */}
-          <section className="programme-section wedding-card" id="celebrations">
-            <CornerOrnaments />
-            <div className="section-crest">
-              <CalendarDays size={20} className="crest-icon" />
-            </div>
-            <span className="card-kicker">TWO DAYS OF FESTIVITIES</span>
-            <h2 className="section-title">Ceremonies & Celebrations</h2>
-            <p className="section-lead">A sacred journey illuminated by ancient traditions, music, dance, and joyous feasts.</p>
-
-            {/* Day Selector Chips */}
-            <div className="schedule-tabs" role="tablist" aria-label="Select celebration day">
-              <button
-                className={`schedule-tab-btn ${activeDayFilter === 'all' ? 'active' : ''}`}
-                onClick={() => {
-                  setActiveDayFilter('all');
-                  audioSystem.playChimeSound(587.33, 0.08);
-                }}
-                role="tab"
-                aria-selected={activeDayFilter === 'all'}
-              >
-                All Events (6)
-              </button>
-              <button
-                className={`schedule-tab-btn ${activeDayFilter === 1 ? 'active' : ''}`}
-                onClick={() => {
-                  setActiveDayFilter(1);
-                  audioSystem.playChimeSound(659.25, 0.08);
-                }}
-                role="tab"
-                aria-selected={activeDayFilter === 1}
-              >
-                Day 1 · 23 Jan (Sat)
-              </button>
-              <button
-                className={`schedule-tab-btn ${activeDayFilter === 2 ? 'active' : ''}`}
-                onClick={() => {
-                  setActiveDayFilter(2);
-                  audioSystem.playChimeSound(783.99, 0.08);
-                }}
-                role="tab"
-                aria-selected={activeDayFilter === 2}
-              >
-                Day 2 · 24 Jan (Sun)
-              </button>
-            </div>
-
-            <div className="wedding-timeline">
-              {filteredEvents.map((event, i) => {
-                const globalIndex = events.indexOf(event);
-                const isExpanded = expanded === globalIndex;
-                const isNewDay = i === 0 || event.day !== filteredEvents[i - 1].day;
-
-                return (
-                  <React.Fragment key={event.title}>
-                    {activeDayFilter === 'all' && isNewDay && (
-                      <div className="day-separator-ribbon">
-                        <span className="ribbon-line" />
-                        <span className="ribbon-text">{event.dayLabel}</span>
-                        <span className="ribbon-line" />
-                      </div>
-                    )}
-
-                    <article
-                      className={`timeline-card ${isExpanded ? 'expanded' : ''}`}
-                    >
-                      <button
-                        className="timeline-header-btn"
-                        onClick={() => {
-                          setExpanded(isExpanded ? -1 : globalIndex);
-                          audioSystem.playChimeSound(587.33, 0.08);
-                        }}
-                        aria-expanded={isExpanded}
-                        aria-controls={`event-detail-${globalIndex}`}
-                      >
-                        <div className="timeline-marker">
-                          <span className="marker-icon">{event.icon}</span>
-                          <span className="marker-ring" />
-                        </div>
-
-                        <div className="timeline-title-group">
-                          <div className="timeline-meta-row">
-                            <span className="event-time-badge">{event.time}</span>
-                            <span className="event-day-mini">{event.dateShort}</span>
-                            <span className="event-tag-pill">{event.tag}</span>
-                          </div>
-                          <h3 className="event-name">{event.title}</h3>
-                          <span className="event-sanskrit">{event.sanskrit}</span>
-                        </div>
-
-                        <div className="timeline-toggle-icon">
-                          {isExpanded ? <Minus size={15} /> : <Plus size={15} />}
-                        </div>
-                      </button>
-
-                      <div
-                        id={`event-detail-${globalIndex}`}
-                        className={`timeline-body ${isExpanded ? 'open' : ''}`}
-                        hidden={!isExpanded}
-                      >
-                        <p className="event-detail-text">{event.detail}</p>
-                      </div>
-                    </article>
-                  </React.Fragment>
-                );
-              })}
-            </div>
-
-          </section>
-
           {/* Section 8: The Grand Venue & Location Hub */}
           <section className="venue-section wedding-card" id="venue">
             <CornerOrnaments />
@@ -1808,7 +1808,7 @@ export default function App() {
           </section>
 
           {/* Section 10: Grand Final Note & Blessings */}
-          <section className="final-note wedding-card">
+          {/* <section className="final-note wedding-card">
             <CornerOrnaments />
             <div className="shlok-banner closing">
               <Ganesh className="hero-ganesh small" />
@@ -1843,7 +1843,7 @@ export default function App() {
             </div>
 
             <div className="closing-flowers" aria-hidden="true" />
-          </section>
+          </section> */}
         </main>
 
         {/* Floating Mobile Luxury Bottom Dock */}
