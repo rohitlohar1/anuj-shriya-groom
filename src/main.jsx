@@ -1163,6 +1163,14 @@ export default function App() {
               </div>
 
               <div className="hero-event-details">
+                <div className="hero-family-intro">
+                  <span className="family-crown">THE KOTHARI FAMILY WELCOMES YOU</span>
+                  <p>
+                    to share our happiness and bless the new beginning together with the
+                  </p>
+                  <span className="family-crown secondary">NAGOTRA SOLANKI FAMILY</span>
+                </div>
+                <div className="hero-card-mini-divider" aria-hidden="true" />
                 <span className="hero-event-date">23RD &amp; 24TH JANUARY 2027</span>
                 <div className="hero-event-venue">
                   <span className="venue-title">PUROHIT HOLIDAY RESORT</span>
