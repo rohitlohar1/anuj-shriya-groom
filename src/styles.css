@@ -3801,12 +3801,26 @@ img {
 
 .honors-names-text {
   font-family: var(--serif);
-  font-size: 15.5px;
-  line-height: 1.7;
+  font-size: 15px;
+  line-height: 1.72;
   color: #3b2014;
   font-weight: 500;
   max-width: 440px;
   margin: 0 auto;
+  text-align: center;
+}
+
+.honors-names-line {
+  display: block;
+}
+
+.honors-family-suffix {
+  display: block;
+  margin-top: 6px;
+  font-style: italic;
+  font-weight: 600;
+  color: #7a3522;
+  font-size: 15px;
 }
 
 .honors-divider-line {

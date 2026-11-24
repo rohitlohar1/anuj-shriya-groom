@@ -1430,12 +1430,13 @@ export default function App() {
                 {/* Inviting with regards */}
                 <div className="honors-block">
                   <span className="honors-heading">Inviting with Regards</span>
-                  <p className="honors-names-text">
-                    Jethmal, Ramesh, Tejraj, Ashok, Popat,<br />
-                    Goutam, Manohar, Ranjeet, Nirmal, Uttam, Santosh,<br />
-                    Sailesh, Uttam, Nitesh, Sandesh, Atishay, Aman<br />
-                    and Kothari family
-                  </p>
+                  <div className="honors-names-text">
+                    <span className="honors-names-line">Jethmal, Ramesh, Tejraj, Ashok, Popat,</span>
+                    <span className="honors-names-line">Goutam, Manohar, Ranjeet, Nirmal,</span>
+                    <span className="honors-names-line">Uttam, Santosh, Sailesh, Uttam,</span>
+                    <span className="honors-names-line">Nitesh, Sandesh, Atishay, Aman</span>
+                    <span className="honors-family-suffix">and Kothari family</span>
+                  </div>
                 </div>
 
                 <div className="honors-divider-line" />
