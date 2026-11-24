@@ -123,6 +123,55 @@ function Ganesh({ className = '' }) {
   );
 }
 
+function MandalaPattern({ className = '' }) {
+  return (
+    <svg className={`mandala-watermark ${className}`} viewBox="0 0 500 500" fill="none" aria-hidden="true">
+      <g stroke="currentColor" strokeWidth="1.2" opacity="0.9">
+        <circle cx="250" cy="250" r="240" strokeDasharray="3 4" strokeWidth="1" />
+        <circle cx="250" cy="250" r="228" strokeWidth="1.5" />
+        <circle cx="250" cy="250" r="216" strokeDasharray="6 6" strokeWidth="1.2" />
+        <circle cx="250" cy="250" r="172" strokeWidth="1.4" />
+        <circle cx="250" cy="250" r="130" strokeDasharray="4 4" strokeWidth="1.2" />
+        <circle cx="250" cy="250" r="92" strokeWidth="1.5" />
+        <circle cx="250" cy="250" r="54" strokeWidth="1.2" />
+        <circle cx="250" cy="250" r="22" strokeWidth="1.5" />
+        {/* 16 Radiating Outer Lotus Petals */}
+        {Array.from({ length: 16 }).map((_, i) => {
+          const angle = (i * 360) / 16;
+          return (
+            <g key={`outer-${i}`} transform={`rotate(${angle} 250 250)`}>
+              <path d="M250 22 C236 68 220 120 226 172 C238 152 262 152 274 172 C280 120 264 68 250 22 Z" />
+              <circle cx="250" cy="38" r="3" fill="currentColor" />
+              <path d="M238 90 Q250 72 262 90" />
+            </g>
+          );
+        })}
+        {/* 16 Radiating Mid Lotus Petals */}
+        {Array.from({ length: 16 }).map((_, i) => {
+          const angle = (i * 360) / 16 + 11.25;
+          return (
+            <g key={`mid-${i}`} transform={`rotate(${angle} 250 250)`}>
+              <path d="M250 78 C240 110 234 140 238 172 C244 158 256 158 262 172 C266 140 260 110 250 78 Z" strokeDasharray="3 2" />
+              <circle cx="250" cy="92" r="2" fill="currentColor" />
+            </g>
+          );
+        })}
+        {/* 8 Core Petals */}
+        {Array.from({ length: 8 }).map((_, i) => {
+          const angle = (i * 360) / 8;
+          return (
+            <g key={`inner-${i}`} transform={`rotate(${angle} 250 250)`}>
+              <path d="M250 158 C242 185 240 205 244 228 C247 218 253 218 256 228 C260 205 258 185 250 158 Z" />
+              <circle cx="250" cy="198" r="2.5" fill="currentColor" />
+            </g>
+          );
+        })}
+        <circle cx="250" cy="250" r="8" fill="currentColor" />
+      </g>
+    </svg>
+  );
+}
+
 function WeddingDivider({ symbol = '❦', text = '' }) {
   return (
     <div className="wedding-divider" aria-hidden="true">
@@ -1082,37 +1131,43 @@ export default function App() {
             />
             <div className="hero-gradient-overlay" />
 
+            {/* Sacred Mandala Watermark (from original card) */}
+            <div className="hero-mandala-wrap" aria-hidden="true">
+              <MandalaPattern className="hero-mandala-watermark" />
+            </div>
+
             <div className="hero-copy">
               <div className="shlok-banner">
                 <Ganesh className="hero-ganesh" />
-                <span className="shlok-title">॥ श्री गणेशाय नमः ॥</span>
+                <span className="shlok-title">Shubh Vivaah Nimantran</span>
                 <p className="shlok-sanskrit">
-                  वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ।<br />
-                  निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥
+                  || Shri Ganeshaya Namah ||<br />
+                  || Shri Parampita Parmeshwaraaya Namah||
                 </p>
               </div>
 
               <div className="invitation-herald">
-                <span className="herald-sub">TOGETHER WITH THEIR FAMILIES</span>
+                <span className="hero-family-kicker">Kothari family</span>
+                <p className="hero-welcome-lead">Welcomes you to the Wedding Ceremony of</p>
                 <h1>
                   <span className="name-groom">Anuj</span>
                   <i className="ampersand">&</i>
                   <span className="name-bride">Shriya</span>
                 </h1>
-                <p className="herald-tag">Joyfully invite you to celebrate their wedding</p>
               </div>
 
-              <div className="family-introduction">
-                <span className="family-crown">THE KOTHARI FAMILY WELCOMES YOU</span>
-                <p>
-                  to share our happiness and bless the new beginning together with the
-                </p>
-                <span className="family-crown secondary">NAGOTRA SOLANKI FAMILY</span>
+              <div className="hero-diamond-divider" aria-hidden="true">
+                <span className="divider-line" />
+                <span className="hero-diamond-sym">◆</span>
+                <span className="divider-line right" />
               </div>
 
-              <div className="hero-date-badge">
-                <MapPin size={13} />
-                <span>Purohit Holiday Resort · Lonavala</span>
+              <div className="hero-event-details">
+                <span className="hero-event-date">23RD &amp; 24TH JANUARY 2027</span>
+                <div className="hero-event-venue">
+                  <span className="venue-title">PUROHIT HOLIDAY RESORT</span>
+                  <span className="venue-subtitle">NEAR S.T. BUS STAND, LONAVALA</span>
+                </div>
               </div>
             </div>
 
@@ -1136,8 +1191,63 @@ export default function App() {
             </div>
           </section>
 
-          {/* Section 2: Heartfelt Welcome Note */}
-          <section className="welcome-note wedding-card" id="invitation">
+          {/* Section 2: Sacred Formal Lagna Patrika */}
+          <section className="formal-invitation-section wedding-card" id="invitation">
+            <CornerOrnaments />
+            <div className="section-crest">
+              <Sparkles size={18} className="crest-icon" />
+            </div>
+            <span className="card-kicker">SHUBH VIVAAH · SACRED LAGNA PATRIKA</span>
+            <h2 className="section-title">The Wedding Invitation</h2>
+            <p className="section-lead">With the divine blessings of our revered elders and ancestors</p>
+
+            <div className="royal-patrika-card">
+              <div className="patrika-arch-header">
+                <Ganesh className="hero-ganesh small" />
+                <span className="shlok-title">॥ श्री गणेशाय नमः ॥</span>
+                <span className="patrika-vedic-verse">॥ श्री परमपिता परमेश्वराय नमः ॥</span>
+              </div>
+
+              <div className="patrika-elders-wrap">
+                <h3 className="patrika-elders-names">
+                  Shobha &amp; Jethmal Dalichandji Kothari
+                </h3>
+                <p className="patrika-elders-sub">
+                  cordially invite you to the wedding ceremony of their grandson
+                </p>
+              </div>
+
+              <div className="patrika-couple-container">
+                {/* Groom */}
+                <div className="patrika-person-card">
+                  <h4 className="patrika-person-title">Anuj</h4>
+                  <span className="patrika-relation-line">S/O Bindu &amp; Rakesh J Kothari</span>
+                </div>
+
+                <div className="patrika-center-amp" aria-hidden="true">&amp;</div>
+
+                {/* Bride */}
+                <div className="patrika-person-card">
+                  <h4 className="patrika-person-title">Shriya</h4>
+                  <span className="patrika-relation-line">G/D/O Late Sukhrajji Bhikamchandji Nagotra Solanki</span>
+                  <span className="patrika-relation-line">D/O Sharmila &amp; Kishorji Nagotra Solanki</span>
+                </div>
+              </div>
+
+              <div className="patrika-footer-wrap">
+                <div className="patrika-date-pill">
+                  <CalendarDays size={13} />
+                  <span>23RD &amp; 24TH JANUARY 2027</span>
+                </div>
+                <div className="hero-event-venue" style={{ marginTop: '3px' }}>
+                  <span>PUROHIT HOLIDAY RESORT · LONAVALA</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Section 3: Heartfelt Welcome Note */}
+          <section className="welcome-note wedding-card" id="welcome-note">
             <CornerOrnaments />
             <WeddingDivider symbol="❦" />
             <span className="card-kicker">WITH DIVINE BLESSINGS</span>
@@ -1178,10 +1288,9 @@ export default function App() {
 
                 <div className="patrika-side-header">
                   <span className="side-badge">वर पक्ष · THE KOTHARI FAMILY</span>
-                  <h3 className="side-member-name">Anuj Kothari</h3>
                 </div>
 
-                <div className="lineage-item">
+                {/* <div className="lineage-item">
                   <span className="lineage-rel">Divine Blessings · Grandmother</span>
                   <b className="lineage-name">Late Smt. Pankubai Jethmal Kothari</b>
                 </div>
@@ -1195,10 +1304,10 @@ export default function App() {
 
                 <div className="honors-divider-line" style={{ width: '180px', margin: '22px auto 16px' }} />
 
-                {/* Kothari Family Honors */}
+                
                 <span className="honors-heading" style={{ fontSize: '11.5px', letterSpacing: '0.22em', marginBottom: '14px', color: '#92532a' }}>
                   ✦ KOTHARI FAMILY HONORS ✦
-                </span>
+                </span> */}
 
                 {/* Divine Blessing */}
                 <div className="honors-block">
@@ -1212,9 +1321,9 @@ export default function App() {
                 <div className="honors-block">
                   <span className="honors-heading">Inviting with Regards</span>
                   <p className="honors-names-text">
-                    Jethmal, Ramesh, Tejraj, Ashok, Popat, Suresh,<br />
+                    Jethmal, Ramesh, Tejraj, Ashok, Popat,<br />
                     Goutam, Manohar, Ranjeet, Nirmal, Uttam, Santosh,<br />
-                    Sailesh, Uttam, Nitesh, Sandesh, Atishay<br />
+                    Sailesh, Uttam, Nitesh, Sandesh, Atishay, Aman<br />
                     and Kothari family
                   </p>
                 </div>
