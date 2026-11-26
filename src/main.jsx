@@ -1518,7 +1518,7 @@ export default function App() {
                 {/* Nanihal Paksh */}
                 <div className="honors-block">
                   <span className="honors-heading">Nanihal Paksh</span>
-                  <b className="honors-person-name">Sha. Mahendrakumarji Jayantilalji</b>
+                  <b className="honors-person-name">Sha. Mahendra Kumarji Jayantilalji Parmar</b>
                   <span className="honors-person-loc">Pune – Sheoganj</span>
                 </div>
 
